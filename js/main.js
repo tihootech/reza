@@ -1,13 +1,6 @@
 (function () {
 	"use strict";
 
-	// show password
-	$('.show-password').click(function () {
-		$(this).siblings('span').toggleClass('hidden');
-		$(this).siblings('small').toggleClass('hidden');
-		$(this).children('i').toggleClass('fa-eye fa-eye-slash text-warning text-success');
-	});
-
 	var treeviewMenu = $('.app-menu');
 
 	// Toggle Sidebar
@@ -34,11 +27,14 @@
 
 	//inits
     $('[title]').tooltip();
-    $('[data-toggle="popover"]').popover();
-	$('.pdp').persianDatepicker();
-	$('.select2').select2({
-       width: '100%',
-    });
+    $('[data-content]').popover({
+		trigger:'hover',
+		placement:'top',
+		html:true,
+	});
+	// $('.select2').select2({
+    //    width: '100%',
+    // });
 
 	//are-you-sures
 	$('.delete, .danger').click(function(){
