@@ -1,4 +1,5 @@
 $(document).on('click', '.full-screen' ,function () {
-	$('header, aside').toggleClass('blur');
+	$('.log-container, .ip-container, header').toggleClass('blur');
+	$('.right-side').toggleClass('with-border');
 	$('#fullscreen-target').toggleClass('full');
 });

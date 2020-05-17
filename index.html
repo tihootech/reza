@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular." />
-        <!-- Twitter meta-->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:site" content="@pratikborsadiya" />
-        <meta property="twitter:creator" content="@pratikborsadiya" />
-        <!-- Open Graph Meta-->
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Vali Admin" />
-        <meta property="og:title" content="Vali - Free Bootstrap 4 admin theme" />
-        <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin" />
-        <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png" />
-        <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular." />
         <title> داشبورد </title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -29,233 +17,170 @@
     <body class="app sidebar-mini">
         <!-- Navbar-->
         <header class="app-header">
-            <a class="app-header__logo" href="index.html"> کارتابل شما </a>
-            <!-- Sidebar toggle button-->
-            <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
-            <!-- Navbar Right Menu-->
             <ul class="app-nav">
-                <li class="app-search">
-                    <input class="app-search__input" type="search" placeholder="جستجو" />
-                    <button class="app-search__button"><i class="fa fa-search"></i></button>
-                </li>
-                <!--Notification Menu-->
                 <li class="dropdown">
-                    <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications">
-                        <i class="material-icons">notifications</i>
+                    <a class="app-nav__item" href="#" data-toggle="dropdown">
+                        پرونده
                     </a>
-                    <ul class="app-notification dropdown-menu text-right">
-                        <li class="app-notification__title"> شما 6 اعلامیه جدید دارید. </li>
-                        <div class="app-notification__content">
-                            <li>
-                                <a class="app-notification__item" href="javascript:;">
-                                    <span class="app-notification__icon">
-                                        <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span>
-                                    </span>
-                                    <div>
-                                        <p class="app-notification__message"> توضیحات ابتدایی اعلامیه </p>
-                                        <p class="app-notification__meta"> 2 دقیقه پیش </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="app-notification__item" href="javascript:;">
-                                    <span class="app-notification__icon">
-                                        <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span>
-                                    </span>
-                                    <div>
-                                        <p class="app-notification__message"> توضیحات ابتدایی اعلامیه </p>
-                                        <p class="app-notification__meta"> 15 دقیقه پیش </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="app-notification__item" href="javascript:;">
-                                    <span class="app-notification__icon">
-                                        <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span>
-                                    </span>
-                                    <div>
-                                        <p class="app-notification__message"> توضیحات ابتدایی اعلامیه </p>
-                                        <p class="app-notification__meta"> 50 دقیقه پیش </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <div class="app-notification__content">
-                                <li>
-                                    <a class="app-notification__item" href="javascript:;">
-                                        <span class="app-notification__icon">
-                                            <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span>
-                                        </span>
-                                        <div>
-                                            <p class="app-notification__message"> توضیحات ابتدایی اعلامیه </p>
-                                            <p class="app-notification__meta"> 6 ساعت پیش </p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="app-notification__item" href="javascript:;">
-                                        <span class="app-notification__icon">
-                                            <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span>
-                                        </span>
-                                        <div>
-                                            <p class="app-notification__message"> توضیحات ابتدایی اعلامیه </p>
-                                            <p class="app-notification__meta"> 18 ساعت پیش </p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="app-notification__item" href="javascript:;">
-                                        <span class="app-notification__icon">
-                                            <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span>
-                                        </span>
-                                        <div>
-                                            <p class="app-notification__message"> توضیحات ابتدایی اعلامیه </p>
-                                            <p class="app-notification__meta"> 2 روز پیش </p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </div>
-                        </div>
-                        <li class="app-notification__footer"><a href="#"> مشاهده همه اعلامیه ها </a></li>
-                    </ul>
-                </li>
-                <!-- User Menu-->
-                <li class="dropdown">
-                    <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu">
-                        <i class="material-icons">person</i>
-                    </a>
-                    <ul class="dropdown-menu settings-menu text-right">
+                    <ul class="dropdown-menu text-right">
                         <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> تنظیمات </a>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 1 </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> حساب کاربری </a>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 2 </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> خروج </a>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 3 </a>
                         </li>
                     </ul>
                 </li>
-            </ul>
-        </header>
-        <!-- Sidebar menu-->
-        <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-        <aside class="app-sidebar">
-            <div class="app-sidebar__user">
-                <img class="app-sidebar__user-avatar" src="images/man.jpg" alt="User Image" />
-                <div>
-                    <p class="app-sidebar__user-name"> رضا یوسفوند </p>
-                    <p class="app-sidebar__user-designation"> برنامه نویس </p>
-                </div>
-            </div>
-            <ul class="app-menu">
-                <li>
-                    <a class="app-menu__item active" href="dashboard.html">
-                        <i class="app-menu__icon material-icons">dashboard</i>
-                        <span class="app-menu__label">داشبورد</span>
+                <li class="dropdown">
+                    <a class="app-nav__item" href="#" data-toggle="dropdown">
+                         تنظیمات دستگاه
                     </a>
+                    <ul class="dropdown-menu text-right">
+                        <li>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 1 </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 2 </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 3 </a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="treeview">
-                    <a class="app-menu__item" href="#" data-toggle="treeview">
-                        <i class="app-menu__icon material-icons">arrow_drop_down_circle</i>
-                        <span class="app-menu__label"> منوی کشویی </span>
-                        <i class="treeview-indicator fa fa-angle-left"></i>
+                <li class="dropdown">
+                    <a class="app-nav__item" href="#" data-toggle="dropdown">
+                         تنظیمات نمایش
                     </a>
-                    <ul class="treeview-menu">
+                    <ul class="dropdown-menu text-right">
                         <li>
-                            <a class="treeview-item" href="#"> <i class="icon fa fa-circle-o"></i> آزمایشی </a>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 1 </a>
                         </li>
                         <li>
-                            <a class="treeview-item" href="#"> <i class="icon fa fa-circle-o"></i> آزمایشی </a>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 2 </a>
                         </li>
                         <li>
-                            <a class="treeview-item" href="#"> <i class="icon fa fa-circle-o"></i> آزمایشی </a>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 3 </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="app-nav__item" href="#" data-toggle="dropdown">
+                        مدیریت کاربر
+                    </a>
+                    <ul class="dropdown-menu text-right">
+                        <li>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 1 </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 2 </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 3 </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="app-nav__item" href="#" data-toggle="dropdown">
+                        کنترل خروجی ها
+                    </a>
+                    <ul class="dropdown-menu text-right">
+                        <li>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 1 </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 2 </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 3 </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="app-nav__item" href="#" data-toggle="dropdown">
+                        تعمیرات و نگهداری
+                    </a>
+                    <ul class="dropdown-menu text-right">
+                        <li>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 1 </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 2 </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 3 </a>
                         </li>
                     </ul>
                 </li>
 
             </ul>
-        </aside>
+        </header>
+
 
 
         <main class="app-content">
 
-            <div id="fullscreen-target" class="tile">
-                <div class="dashboard-bar scroll-design">
-                    <a href="#" class="btn btn-outline-primary m-1"> پرونده </a>
-                    <a href="#" class="btn btn-outline-primary m-1"> تنظیمات دستگاه </a>
-                    <a href="#" class="btn btn-outline-primary m-1"> تنظیمات نمایش </a>
-                    <a href="#" class="btn btn-outline-primary m-1"> مدیریت کاربر </a>
-                    <a href="#" class="btn btn-outline-primary m-1"> کنترل خروجی ها </a>
-                    <a href="#" class="btn btn-outline-primary m-1"> تعمیرات و نگهداری </a>
-                </div>
-                <hr>
+            <div class="tile">
                 <div class="row">
-                    <div class="col-md-9 right-side">
-                        <div class="map-container">
+                    <div class="col-md-9 right-side with-border">
+                        <div id="fullscreen-target" class="map-container">
                             <a href="javascript:void" class="full-screen">
                                 <i class="material-icons">fullscreen</i>
                             </a>
                         </div>
-                        <div class="log-container scroll-design">
+                        <div class="log-container">
 
                             <div class="row">
-                                <div class="col-md-5 text-center pt-2">
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 1 </a>
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 2 </a>
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 3 </a>
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 4 </a>
+
+                                <div class="col-md-4 log-btns scroll-design">
+                                    <div class="text-center pr-3">
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 1 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 2 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 3 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 4 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 1 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 2 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 3 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 4 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 1 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 2 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 3 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 4 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 1 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 2 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 3 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 4 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 1 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 2 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 3 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 4 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 1 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 2 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 3 </a>
+                                        <a href="#" class="btn btn-outline-primary mb-1"> دکمه 4 </a>
+                                    </div>
                                 </div>
-                                <div class="col-md-7">
+                                <div class="col-md-8 log-alerts scroll-design">
                                     <div class="alert alert-info">
                                         <i class="material-icons">info</i>
                                         توضیحات ارائه شده در لاگ
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-5 text-center pt-2">
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 1 </a>
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 2 </a>
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 3 </a>
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 4 </a>
-                                </div>
-                                <div class="col-md-7">
                                     <div class="alert alert-danger">
                                         <i class="material-icons">error</i>
                                         متن یک ارور متن یک ارور متن یک ارور متن یک ارور
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-5 text-center pt-2">
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 1 </a>
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 2 </a>
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 3 </a>
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 4 </a>
-                                </div>
-                                <div class="col-md-7">
                                     <div class="alert alert-success">
                                         <i class="material-icons">check_circle</i>
                                         پیام موفقیت آمیز توسط سیستم
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-5 text-center pt-2">
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 1 </a>
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 2 </a>
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 3 </a>
-                                    <a href="#" class="btn btn-outline-primary mb-1"> دکمه 4 </a>
-                                </div>
-                                <div class="col-md-7">
                                     <div class="alert alert-warning">
                                         <i class="material-icons">warning</i>
                                         متن یک هشدار متن یک هشدار
                                     </div>
                                 </div>
+
                             </div>
 
                         </div>
@@ -263,177 +188,177 @@
                     <div class="col-md-3 ip-container scroll-design">
                         <table class="table">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th colspan="2"> نام یا IP </th>
                                     <th colspan="2"> عملیات </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <div class="led led-red"> </div> </td>
-                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
-                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
-                                </tr>
-                                <tr>
                                     <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-yellow"> </div> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
+                                    <td> <div class="led led-red blink"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
+                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
+                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
+                                </tr>
+                                <tr>
                                     <td> <div class="led led-green"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-blue"> </div> </td>
+                                    <td> <div class="led led-green"> </div> </td>
+                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <div class="led led-red"> </div> </td>
-                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
-                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
-                                </tr>
-                                <tr>
                                     <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-yellow"> </div> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
+                                    <td> <div class="led led-red blink"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
+                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
+                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
+                                </tr>
+                                <tr>
                                     <td> <div class="led led-green"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-blue"> </div> </td>
+                                    <td> <div class="led led-green"> </div> </td>
+                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <div class="led led-red"> </div> </td>
-                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
-                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
-                                </tr>
-                                <tr>
                                     <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-yellow"> </div> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
+                                    <td> <div class="led led-red blink"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
+                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
+                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
+                                </tr>
+                                <tr>
                                     <td> <div class="led led-green"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-blue"> </div> </td>
+                                    <td> <div class="led led-green"> </div> </td>
+                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <div class="led led-red"> </div> </td>
-                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
-                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
-                                </tr>
-                                <tr>
                                     <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-yellow"> </div> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
+                                    <td> <div class="led led-red blink"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
+                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
+                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
+                                </tr>
+                                <tr>
                                     <td> <div class="led led-green"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-blue"> </div> </td>
+                                    <td> <div class="led led-green"> </div> </td>
+                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <div class="led led-red"> </div> </td>
-                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
-                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
-                                </tr>
-                                <tr>
                                     <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-yellow"> </div> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
+                                    <td> <div class="led led-red blink"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
+                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
+                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
+                                </tr>
+                                <tr>
                                     <td> <div class="led led-green"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-blue"> </div> </td>
+                                    <td> <div class="led led-green"> </div> </td>
+                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <div class="led led-red"> </div> </td>
-                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
-                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
-                                </tr>
-                                <tr>
                                     <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-yellow"> </div> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
+                                    <td> <div class="led led-red blink"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
+                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
+                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
+                                </tr>
+                                <tr>
                                     <td> <div class="led led-green"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-blue"> </div> </td>
+                                    <td> <div class="led led-green"> </div> </td>
+                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <div class="led led-red"> </div> </td>
-                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
-                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
-                                </tr>
-                                <tr>
                                     <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-yellow"> </div> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
+                                    <td> <div class="led led-red blink"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
+                                    <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
+                                    <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
+                                </tr>
+                                <tr>
                                     <td> <div class="led led-green"> </div> </td>
+                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>
                                 <tr>
-                                    <td> <span class="numeric"> 192.168.1.1 </span> </td>
-                                    <td> <div class="led led-blue"> </div> </td>
+                                    <td> <div class="led led-green"> </div> </td>
+                                    <td> <span data-content="192.168.1.1"> نام دستگاه </span> </td>
                                     <td> <a href="#" data-content="مشاهده نمودار"> <i class="material-icons">show_chart</i> </a> </td>
                                     <td> <a href="#" data-content="تنظیمات"> <i class="material-icons">settings</i> </a> </td>
                                 </tr>

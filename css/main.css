@@ -13823,12 +13823,6 @@ be a descendant of the grid when it is being dragged.
     transition: margin-left 0.3s ease;
 }
 
-@media (min-width: 768px) {
-    .app-content {
-        margin-right: 230px;
-    }
-}
-
 @media (max-width: 767px) {
     .app-content {
         margin-top: 50px;
@@ -13875,13 +13869,6 @@ be a descendant of the grid when it is being dragged.
     display: flex;
     background-color: #009688;
     z-index: 1030;
-    padding-left: 15px;
-}
-
-@media (min-width: 768px) {
-    .app-header {
-        padding-left: 30px;
-    }
 }
 
 @media print {
@@ -13959,7 +13946,7 @@ be a descendant of the grid when it is being dragged.
     margin-bottom: 0;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {
