@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+	font-family: 'Gandom', 'Roboto';
+}
+
 .right-side {
 	height: 80vh;
 	padding: 0;
@@ -118,6 +124,11 @@
 
 .tile.full-tile {
 	height: 85vh;
+	margin: 0;
+}
+
+input[type=range] {
+	direction: ltr;
 }
 
 /*******************************/

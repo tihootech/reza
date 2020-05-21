@@ -50,3 +50,14 @@ $(document).on('click', '.ip-settings-edit' ,function () {
 
 	$('#config-box').fadeIn();
 });
+
+
+$(document).on('input', '.range-value' ,function () {
+	var value = $(this).val();
+	$(this).siblings('.input-range').val(value);
+});
+
+$(document).on('input', '.input-range' ,function () {
+	var value = $(this).val();
+	$(this).siblings('.range-value').val(value);
+});

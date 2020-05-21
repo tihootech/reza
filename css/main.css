@@ -283,10 +283,6 @@ textarea {
     line-height: inherit;
 }
 
-input[type="number"] {
-    font-family: "OpenSans";
-}
-
 select {
     font-family: "Gandom";
 }
@@ -15583,30 +15579,7 @@ be a descendant of the grid when it is being dragged.
 .hidden {
     display: none;
 }
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    cursor: pointer;
-    display: block;
-    width: 8px;
-    color: #333;
-    text-align: center;
-    position: relative;
-}
-input[type="number"]::-webkit-inner-spin-button:before,
-input[type="number"]::-webkit-inner-spin-button:after {
-    content: "^";
-    position: absolute;
-    right: 0;
-    font-family: monospace;
-    line-height: ;
-}
-input[type="number"]::-webkit-inner-spin-button:before {
-    top: 0px;
-}
-input[type="number"]::-webkit-inner-spin-button:after {
-    bottom: 0px;
-    -webkit-transform: rotate(180deg);
-}
+
 .one-half {
     font-size: 1.5em !important;
 }
