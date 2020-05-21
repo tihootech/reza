@@ -13942,7 +13942,7 @@ be a descendant of the grid when it is being dragged.
 .app-nav {
     display: flex;
     margin-bottom: 0;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 @media (min-width: 768px) {

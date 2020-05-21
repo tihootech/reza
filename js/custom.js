@@ -35,6 +35,18 @@ $(document).on('click', '.searchbox-config' ,function () {
 	$('input#mac').val(mac);
 	$('input#old-ip').val(ip);
 	$('input#the-ip').val(ip);
-	
+
+	$('#config-box').fadeIn();
+});
+
+$(document).on('click', '.ip-settings-edit' ,function () {
+	var tr = $(this).parents('tr');
+	var ip = tr.data('ip');
+
+	$('#alert-info').hide();
+	$('#config-box').fadeOut();
+
+	$('input#the-ip').val(ip);
+
 	$('#config-box').fadeIn();
 });
