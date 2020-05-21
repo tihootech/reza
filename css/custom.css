@@ -1,5 +1,5 @@
 .right-side {
-	height: 450px;
+	height: 80vh;
 	padding: 0;
 }
 
@@ -8,7 +8,7 @@
 }
 
 .map-container {
-	height: 300px;
+	height: 50vh;
 	border-bottom: 2px solid #009688;
 	width: 100%;
 	background-image: url('../images/map.jpg');
@@ -32,7 +32,7 @@
 
 .ip-container {
 	border: 2px solid #009688;
-	height: 450px;
+	height: 80vh;
 	overflow-y: auto;
 	overflow-x: hidden;
 	padding: 0;
@@ -70,7 +70,7 @@
 }
 
 .log-btns , .log-alerts {
-	height: 140px;
+	height: 29vh;
 	overflow-y: auto;
 	overflow-x: hidden;
 	padding-top: 10px;
@@ -81,8 +81,17 @@
 /*******************************/
 
 /* width */
+
+.scroll-design {
+	direction: ltr;
+}
+
+.scroll-design > * {
+	direction: rtl;
+}
+
 .scroll-design::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
   height: 6px;
 }
 
@@ -96,6 +105,10 @@
 .scroll-design::-webkit-scrollbar-thumb {
   background: #009688;
   border-radius: 10px;
+}
+
+.tile.full-tile {
+	height: 85vh;
 }
 
 /*******************************/
