@@ -76,6 +76,15 @@
 	padding-top: 10px;
 }
 
+.search-box {
+	height: 80vh;
+	overflow-y: auto;
+}
+
+#config-box {
+	display: none;
+}
+
 /*******************************/
 /* Scrollbar */
 /*******************************/

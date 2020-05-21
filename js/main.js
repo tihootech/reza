@@ -47,8 +47,8 @@
 			showCancelButton: true,
 			confirmButtonText: "بله. پاک شود.",
 			cancelButtonText: "لغو",
-			closeOnConfirm: false,
-			closeOnCancel: false
+			closeOnConfirm: true,
+			closeOnCancel: true
 		}, function(isConfirm) {
 			if (isConfirm) {
 				target.submit();

@@ -3601,7 +3601,7 @@ input[type="button"].btn-block {
 .dropdown-item {
     display: block;
     width: 100%;
-    padding: 8px 20px;
+    padding: 8px 12px;
     clear: both;
     font-weight: 400;
     color: #212529;
@@ -13940,12 +13940,8 @@ be a descendant of the grid when it is being dragged.
 }
 
 .app-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: 0;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: center;
 }
 
