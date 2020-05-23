@@ -130,10 +130,26 @@ body {
 .tile.full-tile {
 	height: 85vh;
 	margin: 0;
+	/* overflow-y: auto; */
 }
 
 input[type=range], input[type=number] {
 	direction: ltr;
+}
+
+.chart-container {
+	position: relative;
+}
+
+.chart-container > a {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.chart-container > a > i {
+	position: relative;
+	left: 2px;
 }
 
 /*******************************/

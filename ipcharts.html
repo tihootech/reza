@@ -169,13 +169,9 @@
                             <form class="card">
                                 <div class="card-header">
                                     <h3 class="float-right"> مدیریت <b id="target-ip"></b> </h3>
-                                    <a href="#" class="btn btn-primary mx-1 float-left">
+                                    <a href="#" class="btn btn-primary float-left">
                                         <i class="fa fa-plus ml-1"></i>
                                         گراف جدید
-                                    </a>
-                                    <a href="#" class="btn btn-warning mx-1 float-left">
-                                        <i class="fa fa-refresh ml-1"></i>
-                                         ریست نمودار
                                     </a>
                                 </div>
                                 <div class="card-body">
@@ -184,12 +180,12 @@
                                             <div class="form-group">
                                                 <b class="d-block"> Gain </b>
                                                 <input class="input-range slider" type="range" value="20" min="0" max="70">
-                                                <input class="range-value mt-2 form-control" type="number" value="20" min="0" max="70">
-                                                <div class="row mt-1 justify-content-center">
-                                                    <div class="col-6 p-1 pr-3">
-                                                        <button type="button" class="btn btn-outline-danger btn-block btn-sm"> <i class="fa fa-refresh m-0"></i> </button>
+                                                <input class="range-value my-2 form-control" type="number" value="20" min="0" max="70">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-5">
+                                                        <button type="button" class="btn btn-outline-secondary btn-block btn-sm"> <i class="fa fa-refresh m-0"></i> </button>
                                                     </div>
-                                                    <div class="col-6 p-1 pl-3">
+                                                    <div class="col-5">
                                                         <button type="button" class="btn btn-outline-primary btn-block btn-sm"> <i class="fa fa-check m-0"></i> </button>
                                                     </div>
                                                 </div>
@@ -199,16 +195,21 @@
                                             <div class="form-group">
                                                 <b class="d-block"> SMD </b>
                                                 <input class="input-range slider" type="range" value="100" min="0" max="500">
-                                                <input class="range-value mt-2 form-control" type="number" value="100" min="0" max="500">
-                                                <div class="row mt-1 justify-content-center">
-                                                    <div class="col-6 p-1">
+                                                <input class="range-value my-2 form-control" type="number" value="100" min="0" max="500">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-5">
                                                         <button type="button" class="btn btn-outline-primary btn-block btn-sm"> <i class="fa fa-check m-0"></i> </button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-8">
-                                            <canvas id="myChart1" height="100"></canvas>
+                                            <div class="chart-container">
+                                                <canvas id="myChart1" height="92"></canvas>
+                                                <a href="#" class="btn btn-warning">
+                                                    <i class="fa fa-refresh"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row align-items-center text-center">
@@ -216,12 +217,12 @@
                                             <div class="form-group">
                                                 <b class="d-block"> Gain </b>
                                                 <input class="input-range slider" type="range" value="20" min="0" max="70">
-                                                <input class="range-value mt-2 form-control" type="number" value="20" min="0" max="70">
-                                                <div class="row mt-1 justify-content-center">
-                                                    <div class="col-6 p-1 pr-3">
-                                                        <button type="button" class="btn btn-outline-danger btn-block btn-sm"> <i class="fa fa-refresh m-0"></i> </button>
+                                                <input class="range-value my-2 form-control" type="number" value="20" min="0" max="70">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-5">
+                                                        <button type="button" class="btn btn-outline-secondary btn-block btn-sm"> <i class="fa fa-refresh m-0"></i> </button>
                                                     </div>
-                                                    <div class="col-6 p-1 pl-3">
+                                                    <div class="col-5">
                                                         <button type="button" class="btn btn-outline-primary btn-block btn-sm"> <i class="fa fa-check m-0"></i> </button>
                                                     </div>
                                                 </div>
@@ -231,16 +232,21 @@
                                             <div class="form-group">
                                                 <b class="d-block"> SMD </b>
                                                 <input class="input-range slider" type="range" value="100" min="0" max="500">
-                                                <input class="range-value mt-2 form-control" type="number" value="100" min="0" max="500">
-                                                <div class="row mt-1 justify-content-center">
-                                                    <div class="col-6 p-1">
+                                                <input class="range-value my-2 form-control" type="number" value="100" min="0" max="500">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-5">
                                                         <button type="button" class="btn btn-outline-primary btn-block btn-sm"> <i class="fa fa-check m-0"></i> </button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-8">
-                                            <canvas id="myChart2" height="100"></canvas>
+                                            <div class="chart-container">
+                                                <canvas id="myChart2" height="92"></canvas>
+                                                <a href="#" class="btn btn-warning">
+                                                    <i class="fa fa-refresh"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -275,7 +281,6 @@
             data: {
                 labels: ['', '', '', '', '', ''],
                 datasets: [{
-                    label: 'عنوان نمودار',
                     data: [123, 7534, 1274, 5369, 1763, 2000],
                     backgroundColor: 'rgba(0, 150, 136, 0.2)',
                     borderColor: 'rgba(0, 150, 136, 1)',
@@ -283,6 +288,9 @@
                 }]
             },
             options: {
+                legend: {
+                    display: false
+                },
                 scales: {
                     yAxes: [{
                         ticks: {
