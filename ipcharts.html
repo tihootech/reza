@@ -133,39 +133,33 @@
             <div class="tile full-tile">
 
                 <div class="row">
-                    <div class="col-md-4 scroll-design search-box">
+                    <div class="col-md-2 scroll-design search-box">
                         <table class="table text-center">
                             <thead>
                                 <tr>
                                     <th> IP </th>
-                                    <th colspan="2"> عملیات </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr data-ip="199.199.199.119">
-                                    <td> 199.199.199.119 </td>
-                                    <td> <a class="ip-settings-edit" href="javascript:void"> <i class="material-icons">edit</i> </a> </td>
+                                    <td> <a class="ip-charts" href="javascript:void"> 199.199.199.119 </a> </td>
                                 </tr>
                                 <tr data-ip="199.120.199.80">
-                                    <td> 199.120.199.80 </td>
-                                    <td> <a class="ip-settings-edit" href="javascript:void"> <i class="material-icons">edit</i> </a> </td>
+                                    <td> <a class="ip-charts" href="javascript:void"> 199.120.199.80 </a> </td>
                                 </tr>
                                 <tr data-ip="199.70.199.1">
-                                    <td> 199.199.70.1 </td>
-                                    <td> <a class="ip-settings-edit" href="javascript:void"> <i class="material-icons">edit</i> </a> </td>
+                                    <td> <a class="ip-charts" href="javascript:void"> 199.199.70.1 </a> </td>
                                 </tr>
                                 <tr data-ip="100.199.199.119">
-                                    <td> 100.199.199.119 </td>
-                                    <td> <a class="ip-settings-edit" href="javascript:void"> <i class="material-icons">edit</i> </a> </td>
+                                    <td> <a class="ip-charts" href="javascript:void"> 100.199.199.119 </a> </td>
                                 </tr>
                                 <tr data-ip="168.1.199.20">
-                                    <td> 168.1.199.20 </td>
-                                    <td> <a class="ip-settings-edit" href="javascript:void"> <i class="material-icons">edit</i> </a> </td>
+                                    <td> <a class="ip-charts" href="javascript:void"> 168.1.199.20 </a> </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="col-md-8 p-3">
+                    <div class="col-md-10 p-3">
 
                         <div id="alert-info" class="alert alert-info">
                             لطفا یکی از IP های موجود در جدول سمت راست را برای ویرایش انتخاب کنید.
@@ -174,20 +168,24 @@
                         <div id="config-box">
                             <form class="card">
                                 <div class="card-header">
-                                    <h3 class="float-right"> مدیریت IP </h3>
-                                    <button type="button" class="btn btn-primary float-left">
-                                        <i class="fa fa-plus"></i>
+                                    <h3 class="float-right"> مدیریت <b id="target-ip"></b> </h3>
+                                    <a href="#" class="btn btn-primary mx-1 float-left">
+                                        <i class="fa fa-plus ml-1"></i>
                                         گراف جدید
-                                    </button>
+                                    </a>
+                                    <a href="#" class="btn btn-warning mx-1 float-left">
+                                        <i class="fa fa-refresh ml-1"></i>
+                                         ریست نمودار
+                                    </a>
                                 </div>
                                 <div class="card-body">
                                     <div class="row align-items-center text-center">
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <b> Gain </b>
-                                                <input class="input-range" type="range" value="20" min="0" max="70">
-                                                <input class="range-value form-control" type="number" value="20" min="0" max="70">
-                                                <div class="row mt-1">
+                                                <b class="d-block"> Gain </b>
+                                                <input class="input-range slider" type="range" value="20" min="0" max="70">
+                                                <input class="range-value mt-2 form-control" type="number" value="20" min="0" max="70">
+                                                <div class="row mt-1 justify-content-center">
                                                     <div class="col-6 p-1 pr-3">
                                                         <button type="button" class="btn btn-outline-danger btn-block btn-sm"> <i class="fa fa-refresh m-0"></i> </button>
                                                     </div>
@@ -199,14 +197,11 @@
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <b> SMD </b>
-                                                <input class="input-range" type="range" value="100" min="0" max="500">
-                                                <input class="range-value form-control" type="number" value="100" min="0" max="500">
-                                                <div class="row mt-1">
-                                                    <div class="col-6 p-1 pr-3">
-                                                        <button type="button" class="btn btn-outline-danger btn-block btn-sm"> <i class="fa fa-refresh m-0"></i> </button>
-                                                    </div>
-                                                    <div class="col-6 p-1 pl-3">
+                                                <b class="d-block"> SMD </b>
+                                                <input class="input-range slider" type="range" value="100" min="0" max="500">
+                                                <input class="range-value mt-2 form-control" type="number" value="100" min="0" max="500">
+                                                <div class="row mt-1 justify-content-center">
+                                                    <div class="col-6 p-1">
                                                         <button type="button" class="btn btn-outline-primary btn-block btn-sm"> <i class="fa fa-check m-0"></i> </button>
                                                     </div>
                                                 </div>
@@ -219,10 +214,10 @@
                                     <div class="row align-items-center text-center">
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <b> Gain </b>
-                                                <input class="input-range" type="range" value="20" min="0" max="70">
-                                                <input class="range-value form-control" type="number" value="20" min="0" max="70">
-                                                <div class="row mt-1">
+                                                <b class="d-block"> Gain </b>
+                                                <input class="input-range slider" type="range" value="20" min="0" max="70">
+                                                <input class="range-value mt-2 form-control" type="number" value="20" min="0" max="70">
+                                                <div class="row mt-1 justify-content-center">
                                                     <div class="col-6 p-1 pr-3">
                                                         <button type="button" class="btn btn-outline-danger btn-block btn-sm"> <i class="fa fa-refresh m-0"></i> </button>
                                                     </div>
@@ -234,14 +229,11 @@
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <b> SMD </b>
-                                                <input class="input-range" type="range" value="100" min="0" max="500">
-                                                <input class="range-value form-control" type="number" value="100" min="0" max="500">
-                                                <div class="row mt-1">
-                                                    <div class="col-6 p-1 pr-3">
-                                                        <button type="button" class="btn btn-outline-danger btn-block btn-sm"> <i class="fa fa-refresh m-0"></i> </button>
-                                                    </div>
-                                                    <div class="col-6 p-1 pl-3">
+                                                <b class="d-block"> SMD </b>
+                                                <input class="input-range slider" type="range" value="100" min="0" max="500">
+                                                <input class="range-value mt-2 form-control" type="number" value="100" min="0" max="500">
+                                                <div class="row mt-1 justify-content-center">
+                                                    <div class="col-6 p-1">
                                                         <button type="button" class="btn btn-outline-primary btn-block btn-sm"> <i class="fa fa-check m-0"></i> </button>
                                                     </div>
                                                 </div>
@@ -281,10 +273,10 @@
         var chartData = {
             type: 'line',
             data: {
-                labels: ['1', '2', '3', '4', '5', '6'],
+                labels: ['', '', '', '', '', ''],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
+                    label: 'عنوان نمودار',
+                    data: [123, 7534, 1274, 5369, 1763, 2000],
                     backgroundColor: 'rgba(0, 150, 136, 0.2)',
                     borderColor: 'rgba(0, 150, 136, 1)',
                     borderWidth: 1

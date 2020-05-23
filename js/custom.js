@@ -51,6 +51,20 @@ $(document).on('click', '.ip-settings-edit' ,function () {
 	$('#config-box').fadeIn();
 });
 
+$(document).on('click', '.ip-charts' ,function () {
+	var tr = $(this).parents('tr');
+	var ip = tr.data('ip');
+
+	$('#alert-info').hide();
+	$('#config-box').fadeOut();
+
+	$('.ip-charts').removeClass('active');
+	$(this).addClass('active');
+	$('#target-ip').html(ip);
+
+	$('#config-box').fadeIn();
+});
+
 
 $(document).on('input', '.range-value' ,function () {
 	var value = $(this).val();
