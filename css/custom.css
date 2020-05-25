@@ -5,7 +5,6 @@ body {
 }
 
 .right-side {
-	height: 80vh;
 	padding: 0;
 }
 
@@ -14,10 +13,9 @@ body {
 }
 
 .map-container {
-	height: 50vh;
 	border-bottom: 2px solid #009688;
 	width: 100%;
-	background-image: url('../images/map.jpg');
+	background-image: url('../images/bigmap.jpg');
 	background-size: cover;
 	position: relative;
 }
@@ -38,16 +36,9 @@ body {
 
 .ip-container {
 	border: 2px solid #009688;
-	height: 80vh;
 	overflow-y: auto;
 	overflow-x: hidden;
 	padding: 0;
-}
-
-@media (min-width: 768px) {
-	.ip-container {
-		border-right: none;
-	}
 }
 
 .numeric {
@@ -57,8 +48,10 @@ body {
 
 #fullscreen-target.full {
 	position: fixed;
-	right: 20px;
-	left: 20px;
+	right: 0px;
+	left: 0px;
+	top: 0;
+	bottom: 0;
 	z-index: 2000;
 }
 
@@ -67,7 +60,7 @@ body {
 }
 
 .log-container {
-	width: 98.5%;
+	margin: 0;
 }
 
 .log-container .alert {
@@ -76,14 +69,18 @@ body {
 }
 
 .log-btns , .log-alerts {
-	height: 29vh;
 	overflow-y: auto;
 	overflow-x: hidden;
 	padding-top: 10px;
 }
 
+.log-btns .btn {
+	display: inline-block;
+	margin: 2px;
+	width: 95%;
+}
+
 .search-box {
-	height: 80vh;
 	overflow-y: auto;
 }
 
@@ -94,6 +91,10 @@ body {
 .ip-charts.active {
 	color: #aa004e;
 	font-weight: bold;
+}
+
+.row > div {
+	padding: 5px;
 }
 
 /*******************************/
@@ -111,7 +112,7 @@ body {
 }
 
 .scroll-design::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
   height: 6px;
 }
 
@@ -128,9 +129,9 @@ body {
 }
 
 .tile.full-tile {
-	height: 85vh;
 	margin: 0;
-	/* overflow-y: auto; */
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 input[type=range], input[type=number] {
@@ -151,6 +152,51 @@ input[type=range], input[type=number] {
 	position: relative;
 	left: 2px;
 }
+
+.app-header {
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.app-content {
+	padding: 5px;
+	padding-top: 15px;
+}
+
+/*******************************/
+/* Media Queries */
+/*******************************/
+
+.map-container {
+	min-height: 66vh;
+}
+
+@media (min-width: 768px) {
+	.tile.full-tile {
+		min-height: 85vh;
+	}
+	.map-container {
+		min-height: 66vh;
+	}
+	.ip-container {
+		max-height: 88vh;
+	}
+
+	.log-btns , .log-alerts {
+		max-height: 20vh;
+	}
+
+	.search-box {
+		height: 80vh;
+	}
+}
+
+@media (min-width: 768px) {
+	.ip-container {
+		border-right: none;
+	}
+}
+
 
 /*******************************/
 /* Sliders */
