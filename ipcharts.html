@@ -14,117 +14,91 @@
         <link rel="stylesheet" type="text/css" href="css/custom.css?v=2" />
 
     </head>
-    <body class="app sidebar-mini">
-        <!-- Navbar-->
-        <header class="app-header">
-            <ul class="app-nav">
-                <li class="dropdown mr-auto">
-                    <a class="app-nav__item" href="#" data-toggle="dropdown">
-                        پرونده
-                    </a>
-                    <ul class="dropdown-menu text-right">
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 1 </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 2 </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 3 </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="app-nav__item" href="#" data-toggle="dropdown">
-                         تنظیمات دستگاه
-                    </a>
-                    <ul class="dropdown-menu text-right">
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 1 </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 2 </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 3 </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="app-nav__item" href="#" data-toggle="dropdown">
-                         تنظیمات نمایش
-                    </a>
-                    <ul class="dropdown-menu text-right">
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 1 </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 2 </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 3 </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="app-nav__item" href="#" data-toggle="dropdown">
-                        مدیریت کاربر
-                    </a>
-                    <ul class="dropdown-menu text-right">
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 1 </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 2 </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 3 </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="app-nav__item" href="#" data-toggle="dropdown">
-                        کنترل خروجی ها
-                    </a>
-                    <ul class="dropdown-menu text-right">
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 1 </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 2 </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 3 </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown ml-auto">
-                    <a class="app-nav__item" href="#" data-toggle="dropdown">
-                        تعمیرات و نگهداری
-                    </a>
-                    <ul class="dropdown-menu text-right">
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 1 </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 2 </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="page-user.html"><i class="fa fa-circle-o fa-lg"></i> آیتم 3 </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="mr-auto">
-                    <a class="app-nav__item" href="#"> <i class="material-icons">lock</i> </a>
-                </li>
-
-                <li>
-                    <a class="app-nav__item" href="#"> <i class="material-icons">power_settings_new</i> </a>
-                </li>
-
-            </ul>
-        </header>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bootstrap-navbar">
+            <a class="navbar-brand" href="#"> نرم افزار سامانه حفاظت پیرامونی </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            <i class="fa fa-folder-open ml-1"></i>
+                            پرونده
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Another action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            <i class="fa fa-cogs ml-1"></i>
+                            تنظیمات دستگاه
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Another action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            <i class="fa fa-tv ml-1"></i>
+                            تنظیمات نمایش
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Another action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            <i class="fa fa-user ml-1"></i>
+                            مدیریت کاربر
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Another action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            <i class="fa fa-random ml-1"></i>
+                            کنترل خروجی ها
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Another action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            <i class="fa fa-wrench ml-1"></i>
+                            تعمیرات و نگهداری
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Another action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item float-left">
+                        <a class="nav-link" href="#"> <i class="material-icons">lock</i> </a>
+                    </li>
+                    <li class="nav-item float-left">
+                        <a class="nav-link" href="#"> <i class="material-icons">power_settings_new</i> </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
 
 
@@ -176,11 +150,11 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="row align-items-center text-center">
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-1">
                                             <div class="form-group">
                                                 <b class="d-block"> Gain </b>
                                                 <input class="input-range slider" type="range" value="20" min="0" max="70">
-                                                <input class="range-value my-2 form-control" type="number" value="20" min="0" max="70">
+                                                <input class="range-value my-2 form-control form-control-sm" type="number" value="20" min="0" max="70">
                                                 <div class="row justify-content-center">
                                                     <div class="col-5">
                                                         <button type="button" class="btn btn-outline-secondary btn-block btn-sm"> <i class="fa fa-refresh m-0"></i> </button>
@@ -191,11 +165,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-1">
                                             <div class="form-group">
                                                 <b class="d-block"> SMD </b>
                                                 <input class="input-range slider" type="range" value="100" min="0" max="500">
-                                                <input class="range-value my-2 form-control" type="number" value="100" min="0" max="500">
+                                                <input class="range-value my-2 form-control form-control-sm" type="number" value="100" min="0" max="500">
                                                 <div class="row justify-content-center">
                                                     <div class="col-5">
                                                         <button type="button" class="btn btn-outline-primary btn-block btn-sm"> <i class="fa fa-check m-0"></i> </button>
@@ -203,21 +177,21 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-10">
                                             <div class="chart-container">
-                                                <canvas id="myChart1" height="92"></canvas>
-                                                <a href="#" class="btn btn-warning">
+                                                <canvas id="myChart1" height="75"></canvas>
+                                                <a href="#" class="btn btn-warning btn-sm">
                                                     <i class="fa fa-refresh"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row align-items-center text-center">
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-1">
                                             <div class="form-group">
                                                 <b class="d-block"> Gain </b>
                                                 <input class="input-range slider" type="range" value="20" min="0" max="70">
-                                                <input class="range-value my-2 form-control" type="number" value="20" min="0" max="70">
+                                                <input class="range-value my-2 form-control form-control-sm" type="number" value="20" min="0" max="70">
                                                 <div class="row justify-content-center">
                                                     <div class="col-5">
                                                         <button type="button" class="btn btn-outline-secondary btn-block btn-sm"> <i class="fa fa-refresh m-0"></i> </button>
@@ -228,11 +202,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-2">
+                                        <div class="col-lg-1">
                                             <div class="form-group">
                                                 <b class="d-block"> SMD </b>
                                                 <input class="input-range slider" type="range" value="100" min="0" max="500">
-                                                <input class="range-value my-2 form-control" type="number" value="100" min="0" max="500">
+                                                <input class="range-value my-2 form-control form-control-sm" type="number" value="100" min="0" max="500">
                                                 <div class="row justify-content-center">
                                                     <div class="col-5">
                                                         <button type="button" class="btn btn-outline-primary btn-block btn-sm"> <i class="fa fa-check m-0"></i> </button>
@@ -240,10 +214,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-10">
                                             <div class="chart-container">
-                                                <canvas id="myChart2" height="92"></canvas>
-                                                <a href="#" class="btn btn-warning">
+                                                <canvas id="myChart2" height="75"></canvas>
+                                                <a href="#" class="btn btn-warning btn-sm">
                                                     <i class="fa fa-refresh"></i>
                                                 </a>
                                             </div>
@@ -279,9 +253,9 @@
         var chartData = {
             type: 'line',
             data: {
-                labels: ['', '', '', '', '', ''],
+                labels: ['', '', '', '', '', '','', '', '', '', '', '','', '', '', '', '', '', '', '', '', '', '', '','', '', '', '', '', '','', '', '', '', '', '','', '', '', '', '', ''],
                 datasets: [{
-                    data: [123, 7534, 1274, 5369, 1763, 2000],
+                    data: [123, 7534, 1274, 3746, 1763, 5746, 123, 7534, 1274, 3574, 1763, 2000, 2547, 7534, 11, 7896, 1763, 152, 123, 7534, 1274, 5369, 1763, 2000,123, 7534, 1274, 5369, 100, 2000,123, 7452, 1274, 5369, 1763, 2000,123, 7534, 1274, 63, 1763, 2000],
                     backgroundColor: 'rgba(0, 150, 136, 0.2)',
                     borderColor: 'rgba(0, 150, 136, 1)',
                     borderWidth: 1

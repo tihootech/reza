@@ -97,6 +97,21 @@ body {
 	padding: 5px;
 }
 
+.dropdown-toggle::after {
+	margin-left: unset;
+	margin-right: 0.255rem;
+}
+
+.fixed-header {
+	position: relative;
+}
+
+.fixed-header thead th {
+	background: white;
+	position: sticky;
+	top: 0;
+}
+
 /*******************************/
 /* Scrollbar */
 /*******************************/
@@ -153,14 +168,21 @@ input[type=range], input[type=number] {
 	left: 2px;
 }
 
-.app-header {
-	overflow-x: auto;
-	white-space: nowrap;
-}
-
 .app-content {
 	padding: 5px;
-	padding-top: 15px;
+	margin: 0;
+}
+
+.bootstrap-navbar {
+	background-color: #009688;
+}
+
+.bootstrap-navbar .nav-item .nav-link {
+	color: #FFF;
+}
+
+.dropdown-menu {
+	text-align: right;
 }
 
 /*******************************/
@@ -197,6 +219,12 @@ input[type=range], input[type=number] {
 	}
 }
 
+@media (max-width: 768px) {
+	.bootstrap-navbar .nav-item {
+		margin: 10px 0;
+	}
+}
+
 
 /*******************************/
 /* Sliders */
@@ -205,7 +233,7 @@ input[type=range], input[type=number] {
 .slider {
   -webkit-appearance: none;
   width: 100%;
-  height: 8px;
+  height: 5px;
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
@@ -220,8 +248,8 @@ input[type=range], input[type=number] {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background: #009688;
   cursor: pointer;
   border-radius: 50%;
