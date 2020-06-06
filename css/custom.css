@@ -135,6 +135,7 @@ body {
 	border-radius: 50%;
 	display: flex;
 	flex-wrap: wrap;
+	z-index: 9999999999;
 }
 
 #dragme > div {

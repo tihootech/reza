@@ -11,8 +11,8 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.css">
         <!-- Main CSS-->
-        <link rel="stylesheet" type="text/css" href="css/main.css?v=2.1" />
-        <link rel="stylesheet" type="text/css" href="css/custom.css?v=2.1" />
+        <link rel="stylesheet" type="text/css" href="css/main.css?v=2.2" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css?v=2.2" />
 
     </head>
     <body class="app sidebar-mini">
@@ -132,12 +132,26 @@
                         <select class="form-control" name="action" required id="btn-action">
                             <option value=""> -- انتخاب کنید -- </option>
                             <option value="get"> بازکردن صفحه جدید </option>
-                            <option value="post"> ارسال درخواست به سرور </option>
+                            <option value="function"> Function </option>
                         </select>
                     </div>
-                    <div class="col-md-3 hidden" id="btn-action-target">
-                        <label for="content"> </label>
+                    <div class="col-md-3 hidden" id="btn-action-url">
+                        <label for="content"> URL </label>
                         <input type="text" name="content" id="content" value="" class="form-control">
+                    </div>
+                    <div class="col-md-3 hidden" id="btn-action-functions">
+                        <label for="func"> انتخاب Function </label>
+                        <select class="form-control" name="func" required>
+                            <option value=""> -- انتخاب کنید -- </option>
+                            <option>  مورد 1 </option>
+                            <option>  مورد 2 </option>
+                            <option>  مورد 3 </option>
+                            <option>  مورد 4 </option>
+                            <option>  مورد 5 </option>
+                            <option>  مورد 6 </option>
+                            <option>  مورد 7 </option>
+                            <option>  مورد 8 </option>
+                        </select>
                     </div>
                     <div class="col-md-2">
                         <label for="color"> رنگ </label>
@@ -160,8 +174,8 @@
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.js"></script>
-        <script src="js/main.js?v=2.1"></script>
-        <script src="js/custom.js?v=2.1"></script>
+        <script src="js/main.js?v=2.2"></script>
+        <script src="js/custom.js?v=2.2"></script>
         <script src="js/plugins/pace.min.js"></script>
         <script src="js/plugins/sweetalert.min.js"></script>
         <!-- Page specific javascripts-->

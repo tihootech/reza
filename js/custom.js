@@ -79,12 +79,19 @@ $(document).on('input', '.input-range' ,function () {
 
 $(document).on('change', '#btn-action', function () {
 	var val = $(this).val();
-	var target = $('#btn-action-target');
-	val ? target.slideDown() : target.slideUp();
+	var urlDiv = $('#btn-action-url');
+	var functionsDiv = $('#btn-action-functions');
 	if (val) {
-		var label = target.find('label');
-		var text = val == 'get' ? 'URL' : 'پیغام';
-		label.html(text);
+		if (val == 'get') {
+			urlDiv.slideDown();
+			functionsDiv.hide();
+		}else {
+			urlDiv.hide();
+			functionsDiv.slideDown();
+		}
+	}else {
+		urlDiv.hide();
+		functionsDiv.hide();
 	}
 });
 
