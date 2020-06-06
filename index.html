@@ -107,6 +107,12 @@
                 <div class="row">
                     <div class="col-lg-10 right-side with-border">
                         <div id="fullscreen-target" class="map-container">
+                            <div draggable="true" id="dragme">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
                             <a href="javascript:void" class="full-screen">
                                 <i class="material-icons">fullscreen</i>
                             </a>
@@ -118,54 +124,60 @@
 
                                     <div class="col-lg-3 d-flex align-items-center justify-content-center log-btns scroll-design px-4">
                                         <div class="text-center">
-                                            <div class="row" dir="ltr">
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                            <div class="row justify-content-center" dir="ltr">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F1</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F2</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F3</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F4</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F5</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F6</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F7</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F8</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F9</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F10</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F11</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F12</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F13</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F14</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F15</span> </a>
                                                 </div>
-                                                <div class="col-lg-3 col-sm-4 col-6 p-0 m-0">
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0 m-0">
                                                     <a href="#" class="btn btn-outline-primary btn-sm btn-block"> <span>F16</span> </a>
+                                                </div>
+                                                <div class="w-100 p-0 m-0"></div>
+                                                <div class="col-lg-2 col-md-3 col-sm-4 col-6 p-0" data-content="شخصی سازی دکمه ها">
+                                                    <a href="btns.html" class="btn btn-primary btn-sm btn-block">
+                                                        <i class="fa fa-cogs"></i>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>

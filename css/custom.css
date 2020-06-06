@@ -4,8 +4,20 @@ body {
 	font-family: 'Gandom', 'Roboto';
 }
 
+.hidden, .sp-colorize-container {
+	display: none;
+}
+
 .right-side {
 	padding: 0;
+}
+
+
+.sp-choose {
+	background-color: #009688 !important;
+}
+.sp-choose:hover {
+	background-color: #aa004e !important;
 }
 
 .right-side.with-border {
@@ -112,6 +124,50 @@ body {
 	top: 0;
 }
 
+#dragme {
+    position:  absolute;
+    left: 10px;
+    top: 10px;
+    width: 120px;
+    height: 120px;
+    background: rgba(255,255,255,0.66);
+    border: 2px  solid #009688;
+	border-radius: 50%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#dragme > div {
+	width: 50%;
+	cursor: pointer;
+}
+
+#dragme > div:hover {
+	background : rgba(255,255,255,0.66);
+}
+
+#dragme > div:nth-child(1) {
+	border-left: 1px solid #009688;
+	border-bottom: 1px solid #009688;
+	border-top-right-radius: 100%;
+
+}
+
+#dragme > div:nth-child(2) {
+	border-bottom: 1px solid #009688;
+	border-top-left-radius: 100%;
+
+}
+
+#dragme > div:nth-child(3) {
+	border-left: 1px solid #009688;
+	border-bottom-right-radius: 100%;
+}
+
+#dragme > div:nth-child(4) {
+	border-bottom-left-radius: 100%;
+}
+
 /*******************************/
 /* Scrollbar */
 /*******************************/
@@ -215,7 +271,7 @@ input[type=range], input[type=number] {
 
 @media (min-width: 768px) { /*ٍِDESKTOP*/
 	.tile.full-tile {
-		min-height: 85vh;
+		min-height: 90vh;
 	}
 	.ip-container {
 		max-height: 88vh;
