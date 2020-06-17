@@ -14,7 +14,8 @@
         <link rel="stylesheet" type="text/css" href="css/custom.css?v=2.3" />
 
     </head>
-    <body class="app sidebar-mini">
+    <body>
+
         <nav class="navbar navbar-expand-lg navbar-dark bootstrap-navbar">
             <a class="navbar-brand" href="#"> نرم افزار سامانه حفاظت پیرامونی </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +37,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
                             <i class="fa fa-cogs ml-1"></i>
-                            تنظیمات دستگاه
+                            ویرایش دستگاه
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
@@ -47,7 +48,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
                             <i class="fa fa-tv ml-1"></i>
-                            تنظیمات نمایش
+                            ویرایش نمایش
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
@@ -100,128 +101,143 @@
             </div>
         </nav>
 
-
-
         <main class="app-content">
 
             <div class="tile full-tile">
-
                 <div class="row">
-                    <div class="col-lg-2 scroll-design search-box">
+                    <div class="col-lg-10 right-side with-border">
+                        <div id="fullscreen-target" class="map-container">
 
-                        <div class="text-center mb-2">
-                            <a href="#" class="btn btn-primary"> <i class="fa fa-search ml-1"></i> جستجو </a>
+                            <svg class="svg-draw" data-w="4342" data-h="2443" id="map" style="background-image:url(images/city.jpg);">
+
+                                <line class="line-1" x1="100" y1="400" x2="210" y2="400" style="stroke:#def600;stroke-width:3" />
+                                <line class="line-1" x1="100" y1="400" x2="100" y2="300" style="stroke:#def600;stroke-width:3" />
+
+                                <line class="line-2" x1="275" y1="333" x2="444" y2="333" style="stroke:#00d6f6;stroke-width:3" />
+                                <line class="line-2" x1="275" y1="333" x2="257" y2="300" style="stroke:#00d6f6;stroke-width:3" />
+
+                                <line class="line-3" x1="666" y1="450" x2="777" y2="450" style="stroke:#05f600;stroke-width:3" />
+                                <line class="line-3" x1="777" y1="450" x2="700" y2="400" style="stroke:#05f600;stroke-width:3" />
+
+
+                            </svg>
+
                         </div>
-
-                        <table class="table table-sm text-center">
+                        <div class="log-container">
+                            ... <br>
+                            ... <br>
+                            ... <br>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 ip-container scroll-design">
+                        <table class="table table-sm draw-table text-center">
                             <thead>
                                 <tr>
-                                    <th> IP </th>
-                                    <th colspan="2"> عملیات </th>
+                                    <th> عملیات </th>
+                                    <th> نام یا IP </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr data-ip="199.199.199.119" data-mac="00:0a:95:9d:68:16">
-                                    <td> 199.199.199.119 </td>
-                                    <td> <a class="searchbox-config" href="javascript:void"> <i class="material-icons">settings</i> </a> </td>
-                                    <td> <a class="searchbox-delete text-danger" href="javascript:void"> <i class="material-icons">delete</i> </a> </td>
+
+                                <tr class="already-set">
+                                    <td>
+                                        <a href="#draw-modal" data-toggle="modal" data-ip="192.168.1.1" data-content="ویرایش">
+                                            <i class="material-icons">edit</i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <span class="numeric ip-span" data-lines="1"> 192.168.1.1 </span>
+                                        <i class="material-icons text-success" data-content="مختصات این دستگاه قبلا تنظیم شده است.">check</i>
+                                    </td>
                                 </tr>
-                                <tr data-ip="199.120.199.80" data-mac="00:0a:33:9d:68:16">
-                                    <td> 199.120.199.80 </td>
-                                    <td> <a class="searchbox-config" href="javascript:void"> <i class="material-icons">settings</i> </a> </td>
-                                    <td> <a class="searchbox-delete text-danger" href="javascript:void"> <i class="material-icons">delete</i> </a> </td>
+
+                                <tr class="to-set">
+                                    <td>
+                                        <a href="#draw-modal" data-toggle="modal" data-ip="192.168.1.1" data-content="تنظیم مختصات">
+                                            <i class="material-icons">settings_overscan</i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <span class="numeric ip-span"> 192.168.1.1 </span>
+                                        <i class="material-icons text-danger" data-content="مختصات این دستگاه هنوز تنظیم نشده">close</i>
+                                    </td>
                                 </tr>
-                                <tr data-ip="199.70.199.1" data-mac="00:0a:85:9d:32:20">
-                                    <td> 199.199.70.1 </td>
-                                    <td> <a class="searchbox-config" href="javascript:void"> <i class="material-icons">settings</i> </a> </td>
-                                    <td> <a class="searchbox-delete text-danger" href="javascript:void"> <i class="material-icons">delete</i> </a> </td>
+
+                                <tr class="to-set">
+                                    <td>
+                                        <a href="#draw-modal" data-toggle="modal" data-ip="192.168.1.1" data-content="تنظیم مختصات">
+                                            <i class="material-icons">settings_overscan</i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <span class="numeric ip-span"> 192.168.1.1 </span>
+                                        <i class="material-icons text-danger" data-content="مختصات این دستگاه هنوز تنظیم نشده">close</i>
+                                    </td>
                                 </tr>
-                                <tr data-ip="100.199.199.119" data-mac="00:0a:95:9d:75:12">
-                                    <td> 100.199.199.119 </td>
-                                    <td> <a class="searchbox-config" href="javascript:void"> <i class="material-icons">settings</i> </a> </td>
-                                    <td> <a class="searchbox-delete text-danger" href="javascript:void"> <i class="material-icons">delete</i> </a> </td>
+
+                                <tr class="to-set">
+                                    <td>
+                                        <a href="#draw-modal" data-toggle="modal" data-ip="192.168.1.1" data-content="تنظیم مختصات">
+                                            <i class="material-icons">settings_overscan</i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <span class="numeric ip-span"> 192.168.1.1 </span>
+                                        <i class="material-icons text-danger" data-content="مختصات این دستگاه هنوز تنظیم نشده">close</i>
+                                    </td>
                                 </tr>
-                                <tr data-ip="168.1.199.20" data-mac="00:0a:41:9d:32:74">
-                                    <td> 168.1.199.20 </td>
-                                    <td> <a class="searchbox-config" href="javascript:void"> <i class="material-icons">settings</i> </a> </td>
-                                    <td> <a class="searchbox-delete text-danger" href="javascript:void"> <i class="material-icons">delete</i> </a> </td>
+
+                                <tr class="already-set">
+                                    <td>
+                                        <a href="#draw-modal" data-toggle="modal" data-ip="192.168.1.1" data-content="ویرایش">
+                                            <i class="material-icons">edit</i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <span class="numeric ip-span" data-lines="2"> 192.168.1.1 </span>
+                                        <i class="material-icons text-success" data-content="مختصات این دستگاه قبلا تنظیم شده است.">check</i>
+                                    </td>
                                 </tr>
+
+                                <tr class="already-set">
+                                    <td>
+                                        <a href="#draw-modal" data-toggle="modal" data-ip="192.168.1.1" data-content="ویرایش">
+                                            <i class="material-icons">edit</i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <span class="numeric ip-span" data-lines="3"> 192.168.1.1 </span>
+                                        <i class="material-icons text-success" data-content="مختصات این دستگاه قبلا تنظیم شده است.">check</i>
+                                    </td>
+                                </tr>
+
                             </tbody>
                         </table>
                     </div>
-                    <div class="col-lg-10 p-3">
-
-                        <div id="alert-info" class="alert alert-info">
-                            لطفا یکی از IP های موجود در جدول سمت راست را برای مدیریت انتخاب کنید.
-                        </div>
-
-                        <div id="config-box">
-                            <form class="card">
-                                <div class="card-header">
-                                    <h3> تغییر IP </h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="form-group col-lg-4">
-                                            <label for="mac"> MAC </label>
-                                            <input type="text" name="mac" id="mac" class="form-control" required readonly>
-                                        </div>
-                                        <div class="form-group col-lg-4">
-                                            <label for="old-ip"> IP فعلی </label>
-                                            <input type="text" name="old-ip" id="old-ip" class="form-control" required readonly>
-                                        </div>
-                                        <div class="form-group col-lg-4">
-                                            <label for="new-ip"> IP جدید </label>
-                                            <input type="text" name="new-ip" id="new-ip" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-primary"> ارسال </button>
-                                </div>
-                            </form>
-
-                            <form class="card mt-3">
-                                <div class="card-header">
-                                    <h3> ثبت دستگاه </h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="form-group col-lg-3">
-                                            <label for="the-ip"> IP </label>
-                                            <input type="text" name="the-ip" id="the-ip" class="form-control" required readonly>
-                                        </div>
-                                        <div class="form-group col-lg-3">
-                                            <label for="zone-1"> زون اول </label>
-                                            <input type="text" name="zone-1" id="zone-1" class="form-control" required>
-                                        </div>
-                                        <div class="form-group col-lg-3">
-                                            <label for="zone-2"> زون دوم </label>
-                                            <input type="text" name="zone-2" id="zone-2" class="form-control" required>
-                                        </div>
-                                        <div class="form-group col-lg-3">
-                                            <label for="device"> نوع دستگاه </label>
-                                            <select class="form-control" required name="device" id="device">
-                                                <option value=""> -- انتخاب کنید -- </option>
-                                                <option> فنس حساس </option>
-                                                <option> فنس الکتریکی </option>
-                                                <option> سنسور فنی </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-primary"> ثبت </button>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
                 </div>
-
             </div>
 
         </main>
+
+        <div class="modal fade" id="draw-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-full" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"> <i class="fa fa-cog ml-1"></i> تنظیم مختصات دستگاه </h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0 px-3">
+                        در دست ساخت ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fa fa-times-circle ml-1"></i> انصراف </button>
+                        <button type="button" class="btn btn-primary"> <i class="fa fa-check ml-1"></i> ذخیره تغییرات </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Essential javascripts for application to work-->
         <script src="js/jquery-3.3.1.min.js"></script>
@@ -231,8 +247,8 @@
         <script src="js/custom.js?v=2.3"></script>
         <!-- The javascript plugin to display page loading on top-->
         <script src="js/plugins/pace.min.js"></script>
-        <script src="js/plugins/sweetalert.min.js"></script>
         <!-- Page specific javascripts-->
         <script type="text/javascript" src="js/plugins/chart.js"></script>
+
     </body>
 </html>

@@ -1,5 +1,24 @@
+$(document).ready(function () {
+
+	if ($('#map').length) {
+		drawCanvas();
+	}
+
+});
+
+function drawCanvas() {
+	var originalHeight = $('#map').data('h');
+	var originalWidth = $('#map').data('w');
+	var currentHeight = Number($('#map').css('height').replace('px',''));
+	var width = Math.floor((currentHeight * originalWidth) / originalHeight );
+	console.log(width);
+	$('#map').width(width).css('margin', 'auto');
+}
+
+
 $(document).on('click', '.full-screen' ,function () {
-	$('.log-container, .ip-container, header').toggleClass('blur');
+	$('.log-container, .ip-container, nav').toggleClass('blur');
+	$('.full-tile').toggleClass('maximized');
 	$('.right-side').toggleClass('with-border');
 	$('#fullscreen-target').toggleClass('full');
 	$('#dragme').css({
@@ -99,6 +118,21 @@ $(document).on('change', '#btn-action', function () {
 	}
 });
 
+
+/*******************************/
+/* draw */
+/*******************************/
+
+$('.draw-table .already-set .ip-span').click(function () {
+
+	$('.draw-table .already-set .ip-span').removeClass('active');
+	$(this).addClass('active');
+
+	var lines = $(this).data('lines');
+	$('#map > line').hide();
+	$('#map').find('.line-'+lines).fadeIn(200).fadeOut(300).fadeIn();
+
+});
 
 /*******************************/
 /* dragme */
