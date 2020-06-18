@@ -137,6 +137,7 @@ $('[data-channel]').click(function () {
 	$('#map').addClass('draw-mode');
 	$('#map').attr('data-current-channel', $(this).data('channel'))
 	$('#channels .info').show();
+	$('#map > .pl').hide();
 });
 
 $(document).on('click', '#map.draw-mode', function (e) {
