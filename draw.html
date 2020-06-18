@@ -13,8 +13,8 @@
         <link rel="stylesheet" type="text/css" href="css/animate.css" />
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.css">
         <!-- Main CSS-->
-        <link rel="stylesheet" type="text/css" href="css/main.css?v=2.4" />
-        <link rel="stylesheet" type="text/css" href="css/custom.css?v=2.4" />
+        <link rel="stylesheet" type="text/css" href="css/main.css?v=2.5" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css?v=2.5" />
 
     </head>
     <body>
@@ -133,8 +133,8 @@
                         </div>
                     </div>
                     <div class="col-lg-2 ip-container scroll-design">
-                        <div class="collapse my-2 text-center" id="channels" data-ip="192.168.1.1" dir="ltr">
-                            <h6>192.168.1.1</h6>
+                        <div class="collapse my-2 text-center" id="channels" dir="ltr">
+                            <h6 class="numeric ip-title"></h6>
                             <div class="text-danger info hidden">
                                 *
                                 روی نقشه خط مورد نظر خود را رسم کنید.
@@ -145,12 +145,17 @@
                                 <button type="button" class="btn btn-primary btn-sm" id="test-alarm"> آزمایش آلارم </button>
                             </div>
                             <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <input id="line-colors" class="form-control form-control-sm color-picker" autocomplete="off" placeholder="انتخاب رنگ">
+                                <div class="row justify-content-center">
+                                    <div class="col-6">
+                                        <label for="line-colors" class="my-0">رنگ خط</label>
+                                        <input id="line-colors" class="form-control form-control-sm color-picker" autocomplete="off">
                                     </div>
-                                    <div class="col-4">
-                                        <button type="button" class="btn btn-block btn-primary btn-sm"> تایید </button>
+                                    <div class="col-6">
+                                        <label for="alarm-color" class="my-0">رنگ آلارم</label>
+                                        <input id="alarm-color" class="form-control form-control-sm color-picker" autocomplete="off">
+                                    </div>
+                                    <div class="col-4 mt-2">
+                                        <button type="button" class="btn btn-block btn-primary btn-sm" onclick="location.reload()"> تایید </button>
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +171,7 @@
 
                                 <tr class="already-set">
                                     <td>
-                                        <a href="#channels" data-toggle="collapse" data-content="ویرایش">
+                                        <a href="javascript:void" class="show-draw-box" data-ip="192.168.1.1" data-content="ویرایش">
                                             <i class="material-icons">edit</i>
                                         </a>
                                     </td>
@@ -178,60 +183,60 @@
 
                                 <tr class="to-set">
                                     <td>
-                                        <a href="#channels-2" data-toggle="collapse" data-ip="192.168.1.1" data-content="تنظیم مختصات">
+                                        <a href="javascript:void" class="show-draw-box" data-ip="192.100.20.1" data-content="تنظیم مختصات">
                                             <i class="material-icons">settings_overscan</i>
                                         </a>
                                     </td>
                                     <td>
-                                        <span class="numeric ip-span"> 192.168.1.1 </span>
+                                        <span class="numeric ip-span"> 192.100.20.1 </span>
                                         <i class="material-icons text-danger" data-content="مختصات این دستگاه هنوز تنظیم نشده">close</i>
                                     </td>
                                 </tr>
 
                                 <tr class="to-set">
                                     <td>
-                                        <a href="#channels-3" data-toggle="collapse" data-ip="192.168.1.1" data-content="تنظیم مختصات">
+                                        <a href="javascript:void" class="show-draw-box" data-ip="192.55.1.1" data-content="تنظیم مختصات">
                                             <i class="material-icons">settings_overscan</i>
                                         </a>
                                     </td>
                                     <td>
-                                        <span class="numeric ip-span"> 192.168.1.1 </span>
+                                        <span class="numeric ip-span"> 192.55.1.1 </span>
                                         <i class="material-icons text-danger" data-content="مختصات این دستگاه هنوز تنظیم نشده">close</i>
                                     </td>
                                 </tr>
 
                                 <tr class="to-set">
                                     <td>
-                                        <a href="#channels-4" data-toggle="collapse" data-ip="192.168.1.1" data-content="تنظیم مختصات">
+                                        <a href="javascript:void" class="show-draw-box" data-ip="192.178.30.20" data-content="تنظیم مختصات">
                                             <i class="material-icons">settings_overscan</i>
                                         </a>
                                     </td>
                                     <td>
-                                        <span class="numeric ip-span"> 192.168.1.1 </span>
+                                        <span class="numeric ip-span"> 192.178.30.20 </span>
                                         <i class="material-icons text-danger" data-content="مختصات این دستگاه هنوز تنظیم نشده">close</i>
                                     </td>
                                 </tr>
 
                                 <tr class="already-set">
                                     <td>
-                                        <a href="#channels-5" data-toggle="collapse" data-ip="192.168.1.1" data-content="ویرایش">
+                                        <a href="javascript:void" class="show-draw-box" data-ip="192.168.9.9" data-content="ویرایش">
                                             <i class="material-icons">edit</i>
                                         </a>
                                     </td>
                                     <td>
-                                        <span class="numeric ip-span" data-lines="2"> 192.168.1.1 </span>
+                                        <span class="numeric ip-span" data-lines="2"> 192.168.9.9 </span>
                                         <i class="material-icons text-success" data-content="مختصات این دستگاه قبلا تنظیم شده است.">check</i>
                                     </td>
                                 </tr>
 
                                 <tr class="already-set">
                                     <td>
-                                        <a href="#channels-6" data-toggle="collapse" data-ip="192.168.1.1" data-content="ویرایش">
+                                        <a href="javascript:void" class="show-draw-box" data-ip="192.168.65.36" data-content="ویرایش">
                                             <i class="material-icons">edit</i>
                                         </a>
                                     </td>
                                     <td>
-                                        <span class="numeric ip-span" data-lines="3"> 192.168.1.1 </span>
+                                        <span class="numeric ip-span" data-lines="3"> 192.168.65.36 </span>
                                         <i class="material-icons text-success" data-content="مختصات این دستگاه قبلا تنظیم شده است.">check</i>
                                     </td>
                                 </tr>
@@ -249,8 +254,8 @@
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.js"></script>
-        <script src="js/main.js?v=2.4"></script>
-        <script src="js/custom.js?v=2.4"></script>
+        <script src="js/main.js?v=2.5"></script>
+        <script src="js/custom.js?v=2.5"></script>
         <!-- The javascript plugin to display page loading on top-->
         <script src="js/plugins/pace.min.js"></script>
         <!-- Page specific javascripts-->

@@ -140,6 +140,14 @@ $('[data-channel]').click(function () {
 	$('#map > .pl').hide();
 });
 
+$('.show-draw-box').click(function() {
+	$('#channels > .ip-title').text($(this).data('ip')).fadeOut(250).fadeIn(250);
+	$('#channels').slideDown();
+	$('#map > line').hide();
+	$('.ip-span').removeClass('active');
+	$('#map > .new-channels').remove();
+});
+
 $(document).on('click', '#map.draw-mode', function (e) {
 
 	var currentChannel = $(this).attr('data-current-channel');
@@ -173,10 +181,19 @@ $(document).on('change', '#line-colors', function () {
 });
 
 $(document).on('click', '#test-alarm', function () {
+	var alarmColor = $('#alarm-color').val();
+	var defaultColor = $('#line-colors').val() ? $('#line-colors').val() : '#fff';
+	if (alarmColor) {
+		$('#map > .new-channels').css('stroke', alarmColor);
+	}
 	$('#map > .new-channels')
 		.fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250)
 		.fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250)
-		.fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
+		.fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250)
+
+	setTimeout(function(){
+		$('#map > .new-channels').css('stroke', defaultColor);
+	}, 3000);
 
 });
 
