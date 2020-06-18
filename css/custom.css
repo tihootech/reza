@@ -43,10 +43,6 @@ body {
 	background-size:cover;
 }
 
-.svg-draw > line {
-	display: none;
-}
-
 .full-tile.maximized .map-container > img {
 	width: auto !important;
 	max-height: 90vh !important;
@@ -299,6 +295,19 @@ input[type=range], input[type=number] {
 .draw-table .already-set .ip-span.active {
 	color: #009688;
 	font-weight: bold;
+}
+
+.svg-draw > line {
+	stroke: #fff;
+	stroke-width:3;
+}
+
+#map.draw-mode {
+	cursor: crosshair;
+}
+
+.red-shadow {
+	box-shadow: 5px 8px 8px red;
 }
 
 /*******************************/

@@ -11,7 +11,6 @@ function drawCanvas() {
 	var originalWidth = $('#map').data('w');
 	var currentHeight = Number($('#map').css('height').replace('px',''));
 	var width = Math.floor((currentHeight * originalWidth) / originalHeight );
-	console.log(width);
 	$('#map').width(width).css('margin', 'auto');
 }
 
@@ -130,9 +129,74 @@ $('.draw-table .already-set .ip-span').click(function () {
 
 	var lines = $(this).data('lines');
 	$('#map > line').hide();
-	$('#map').find('.line-'+lines).fadeIn(200).fadeOut(300).fadeIn();
+	$('#map').find('.line-'+lines).show();
 
 });
+
+$('[data-channel]').click(function () {
+	$('#map').addClass('draw-mode');
+	$('#map').attr('data-current-channel', $(this).data('channel'))
+	$('#channels .info').show();
+});
+
+$(document).on('click', '#map.draw-mode', function (e) {
+
+	var currentChannel = $(this).attr('data-current-channel');
+	var elm = $(this);
+	var xPos = e.pageX - elm.offset().left;
+	var yPos = e.pageY - elm.offset().top;
+
+	if ($('#map > line#new-line').length) {
+		updateLine(xPos, yPos);
+		$('#map > line#new-line').attr('id', 'line-created-'+currentChannel);
+	}else {
+		$('#line-created-'+currentChannel).remove();
+		createLine(xPos, yPos);
+	}
+
+});
+
+$(document).on('mousemove', '#map.draw-mode', function (e) {
+	var elm = $(this);
+	var xPos = e.pageX - elm.offset().left;
+	var yPos = e.pageY - elm.offset().top;
+
+	if ($('#map > line#new-line').length) {
+		updateLine(xPos, yPos);
+	}
+});
+
+$(document).on('change', '#line-colors', function () {
+	var value = $(this).val();
+	$('#map > .new-channels').css('stroke', value);
+});
+
+$(document).on('click', '#test-alarm', function () {
+	$('#map > .new-channels')
+		.fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250)
+		.fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250)
+		.fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
+
+});
+
+function createLine(x, y) {
+	var color = $('#line-colors').val();
+	var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
+	newLine.setAttribute('id', 'new-line');
+	newLine.setAttribute('x1', x);
+	newLine.setAttribute('y1', y);
+	newLine.setAttribute('x2', x);
+	newLine.setAttribute('y2', y);
+	if (color) {
+		newLine.setAttribute('style', 'stroke:'+color);
+	}
+	newLine.setAttribute('class', 'new-channels');
+	$("#map").append(newLine);
+}
+
+function updateLine(x, y) {
+	$('#map > line#new-line').attr('x2', x).attr('y2', y);
+}
 
 /*******************************/
 /* dragme */

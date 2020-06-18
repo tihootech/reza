@@ -9,9 +9,12 @@
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;500&display=swap" rel="stylesheet">
+        <!-- Plugins-->
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.css">
         <!-- Main CSS-->
-        <link rel="stylesheet" type="text/css" href="css/main.css?v=2.3" />
-        <link rel="stylesheet" type="text/css" href="css/custom.css?v=2.3" />
+        <link rel="stylesheet" type="text/css" href="css/main.css?v=2.4" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css?v=2.4" />
 
     </head>
     <body>
@@ -110,14 +113,14 @@
 
                             <svg class="svg-draw" data-w="4342" data-h="2443" id="map" style="background-image:url(images/city.jpg);">
 
-                                <line class="line-1" x1="100" y1="400" x2="210" y2="400" style="stroke:#def600;stroke-width:3" />
-                                <line class="line-1" x1="100" y1="400" x2="100" y2="300" style="stroke:#def600;stroke-width:3" />
+                                <line class="hidden line-1 animate__animated animate__flash" x1="100" y1="400" x2="210" y2="400" style="stroke:#def600" />
+                                <line class="hidden line-1 animate__animated animate__flash" x1="100" y1="400" x2="100" y2="300" style="stroke:#def600" />
 
-                                <line class="line-2" x1="275" y1="333" x2="444" y2="333" style="stroke:#00d6f6;stroke-width:3" />
-                                <line class="line-2" x1="275" y1="333" x2="257" y2="300" style="stroke:#00d6f6;stroke-width:3" />
+                                <line class="hidden line-2 animate__animated animate__flash" x1="275" y1="333" x2="444" y2="333" style="stroke:#00d6f6" />
+                                <line class="hidden line-2 animate__animated animate__flash" x1="275" y1="333" x2="257" y2="300" style="stroke:#00d6f6" />
 
-                                <line class="line-3" x1="666" y1="450" x2="777" y2="450" style="stroke:#05f600;stroke-width:3" />
-                                <line class="line-3" x1="777" y1="450" x2="700" y2="400" style="stroke:#05f600;stroke-width:3" />
+                                <line class="hidden line-3 animate__animated animate__flash" x1="666" y1="450" x2="777" y2="450" style="stroke:#05f600" />
+                                <line class="hidden line-3 animate__animated animate__flash" x1="777" y1="450" x2="700" y2="400" style="stroke:#05f600" />
 
 
                             </svg>
@@ -130,6 +133,28 @@
                         </div>
                     </div>
                     <div class="col-lg-2 ip-container scroll-design">
+                        <div class="collapse my-2 text-center" id="channels" data-ip="192.168.1.1" dir="ltr">
+                            <h6>192.168.1.1</h6>
+                            <div class="text-danger info hidden">
+                                *
+                                روی نقشه خط مورد نظر خود را رسم کنید.
+                            </div>
+                            <div class="my-2">
+                                <button type="button" class="btn btn-primary btn-sm" data-channel="A"> کانال A </button>
+                                <button type="button" class="btn btn-primary btn-sm" data-channel="B"> کانال B </button>
+                                <button type="button" class="btn btn-primary btn-sm" id="test-alarm"> آزمایش آلارم </button>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <input id="line-colors" class="form-control form-control-sm color-picker" autocomplete="off" placeholder="انتخاب رنگ">
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="button" class="btn btn-block btn-primary btn-sm"> تایید </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <table class="table table-sm draw-table text-center">
                             <thead>
                                 <tr>
@@ -141,7 +166,7 @@
 
                                 <tr class="already-set">
                                     <td>
-                                        <a href="#draw-modal" data-toggle="modal" data-ip="192.168.1.1" data-content="ویرایش">
+                                        <a href="#channels" data-toggle="collapse" data-content="ویرایش">
                                             <i class="material-icons">edit</i>
                                         </a>
                                     </td>
@@ -153,7 +178,7 @@
 
                                 <tr class="to-set">
                                     <td>
-                                        <a href="#draw-modal" data-toggle="modal" data-ip="192.168.1.1" data-content="تنظیم مختصات">
+                                        <a href="#channels-2" data-toggle="collapse" data-ip="192.168.1.1" data-content="تنظیم مختصات">
                                             <i class="material-icons">settings_overscan</i>
                                         </a>
                                     </td>
@@ -165,7 +190,7 @@
 
                                 <tr class="to-set">
                                     <td>
-                                        <a href="#draw-modal" data-toggle="modal" data-ip="192.168.1.1" data-content="تنظیم مختصات">
+                                        <a href="#channels-3" data-toggle="collapse" data-ip="192.168.1.1" data-content="تنظیم مختصات">
                                             <i class="material-icons">settings_overscan</i>
                                         </a>
                                     </td>
@@ -177,7 +202,7 @@
 
                                 <tr class="to-set">
                                     <td>
-                                        <a href="#draw-modal" data-toggle="modal" data-ip="192.168.1.1" data-content="تنظیم مختصات">
+                                        <a href="#channels-4" data-toggle="collapse" data-ip="192.168.1.1" data-content="تنظیم مختصات">
                                             <i class="material-icons">settings_overscan</i>
                                         </a>
                                     </td>
@@ -189,7 +214,7 @@
 
                                 <tr class="already-set">
                                     <td>
-                                        <a href="#draw-modal" data-toggle="modal" data-ip="192.168.1.1" data-content="ویرایش">
+                                        <a href="#channels-5" data-toggle="collapse" data-ip="192.168.1.1" data-content="ویرایش">
                                             <i class="material-icons">edit</i>
                                         </a>
                                     </td>
@@ -201,7 +226,7 @@
 
                                 <tr class="already-set">
                                     <td>
-                                        <a href="#draw-modal" data-toggle="modal" data-ip="192.168.1.1" data-content="ویرایش">
+                                        <a href="#channels-6" data-toggle="collapse" data-ip="192.168.1.1" data-content="ویرایش">
                                             <i class="material-icons">edit</i>
                                         </a>
                                     </td>
@@ -219,32 +244,13 @@
 
         </main>
 
-        <div class="modal fade" id="draw-modal" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-full" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title"> <i class="fa fa-cog ml-1"></i> تنظیم مختصات دستگاه </h5>
-                        <button type="button" class="close" data-dismiss="modal">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body p-0 px-3">
-                        در دست ساخت ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fa fa-times-circle ml-1"></i> انصراف </button>
-                        <button type="button" class="btn btn-primary"> <i class="fa fa-check ml-1"></i> ذخیره تغییرات </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Essential javascripts for application to work-->
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js?v=2.3"></script>
-        <script src="js/custom.js?v=2.3"></script>
+        <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.js"></script>
+        <script src="js/main.js?v=2.4"></script>
+        <script src="js/custom.js?v=2.4"></script>
         <!-- The javascript plugin to display page loading on top-->
         <script src="js/plugins/pace.min.js"></script>
         <!-- Page specific javascripts-->
