@@ -157,12 +157,22 @@ $(document).on('click', '#map.draw-mode', function (e) {
 
 	if ($('#map > line#new-line').length) {
 		updateLine(xPos, yPos);
-		$('#map > line#new-line').attr('id', 'line-created-'+currentChannel);
+		$('#map > line#new-line').addClass('line-created-'+currentChannel).removeAttr('id');
 	}else {
-		$('#line-created-'+currentChannel).remove();
 		createLine(xPos, yPos);
 	}
 
+});
+
+$(document).on('mousedown', '#map > .new-channels', function (e) {
+	if (e.which == 3) {
+		$(this).remove();
+		return false;
+	}
+});
+
+$('#map').contextmenu(function() {
+    return false;
 });
 
 $(document).on('mousemove', '#map.draw-mode', function (e) {
