@@ -237,3 +237,10 @@ $(document).on('click', '.icons-toolbox > img', function () {
 	$(this).clone().appendTo('.image-icons');
 	$( ".image-icons > img" ).draggable();
 });
+
+$(document).on('mousedown', '.image-icons > img', function (e) {
+	if (e.which == 3) {
+		$(this).remove();
+		return false;
+	}
+});
