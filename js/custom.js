@@ -230,5 +230,10 @@ function updateLine(x, y) {
 }
 
 /*******************************/
-/* draggable */
+/* icons toolbox */
 /*******************************/
+
+$(document).on('click', '.icons-toolbox > img', function () {
+	$(this).clone().appendTo('.image-icons');
+	$( ".image-icons > img" ).draggable();
+});

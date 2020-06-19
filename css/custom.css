@@ -305,8 +305,8 @@ input[type=range], input[type=number] {
 }
 
 .draw-page .map-container {
-	border-bottom: none;
 	position: relative;
+	padding-bottom: 5px;
 }
 
 .draw-page .log-container {
@@ -316,21 +316,29 @@ input[type=range], input[type=number] {
 }
 
 .draw-page .map-container > #map {
-	height: 86vh;
+	height: 77vh;
 }
 
 
-.draw-page .image-icons {
+.draw-page .image-icons > img {
 	position: absolute;
 	top: 10px;
-	right: 25%;
+	left: 10%;
+}
+
+.icons-toolbox {
+	text-align: center;
+}
+
+.draw-page .image-icons > img, .icons-toolbox > img {
+	height: 40px;
+	width: 40px;
+	margin: 10px;
+	cursor: pointer;
 }
 
 .draw-page .image-icons > img {
-	height: 40px;
-	width: 40px;
-	margin: 12px 8px 0 8px;
-	cursor: pointer;
+	cursor: all-scroll;
 }
 
 /*******************************/
