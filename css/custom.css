@@ -32,18 +32,12 @@ body {
 	display: flex;
 }
 
-.map-container > img {
-	max-width: 100%;
-	max-height: 65vh;
-	margin: auto;
-}
-
 .map-container > #map {
 	height: 64vh;
 	background-size:cover;
 }
 
-.full-tile.maximized .map-container > img {
+.full-tile.maximized .map-container > #map {
 	width: auto !important;
 	max-height: 90vh !important;
 }
@@ -307,6 +301,35 @@ input[type=range], input[type=number] {
 }
 
 #map > .new-channels {
+	cursor: pointer;
+}
+
+.draw-page .map-container {
+	border-bottom: none;
+	position: relative;
+}
+
+.draw-page .log-container {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.draw-page .map-container > #map {
+	height: 86vh;
+}
+
+
+.draw-page .image-icons {
+	position: absolute;
+	top: 10px;
+	right: 25%;
+}
+
+.draw-page .image-icons > img {
+	height: 40px;
+	width: 40px;
+	margin: 12px 8px 0 8px;
 	cursor: pointer;
 }
 
