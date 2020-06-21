@@ -320,7 +320,7 @@ input[type=range], input[type=number] {
 }
 
 
-.draw-page .image-icons > img {
+.draw-page .image-icons > i {
 	position: absolute;
 	top: 10px;
 	left: 10%;
@@ -328,16 +328,18 @@ input[type=range], input[type=number] {
 
 .icons-toolbox {
 	text-align: center;
+	display: flex;
+	align-items: center;
 }
 
-.draw-page .image-icons > img, .icons-toolbox > img {
-	height: 40px;
-	width: 40px;
+.draw-page .image-icons > i, .icons-toolbox > i {
+	font-size: 40px;
+	color: #009688;
 	margin: 10px;
 	cursor: pointer;
 }
 
-.draw-page .image-icons > img {
+.draw-page .image-icons > i {
 	cursor: all-scroll;
 }
 

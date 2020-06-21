@@ -13,8 +13,8 @@
         <link rel="stylesheet" type="text/css" href="css/animate.css" />
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.css">
         <!-- Main CSS-->
-        <link rel="stylesheet" type="text/css" href="css/main.css?v=2.9" />
-        <link rel="stylesheet" type="text/css" href="css/custom.css?v=2.9" />
+        <link rel="stylesheet" type="text/css" href="css/main.css?v=3.0" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css?v=3.0" />
 
     </head>
     <body>
@@ -130,21 +130,28 @@
 
                         </div>
                         <div class="icons-toolbox">
-                            <img class="float-right" src="images/icons/brightness.png" data-content="روشنایی">
-                            <img class="float-right" src="images/icons/barricade.png" data-content="راهبند">
-                            <img class="float-right" src="images/icons/autodoor.png" data-content="درب برقی">
-                            <img class="float-right" src="images/icons/spotlight.png" data-content="نورافکن">
-                            <img class="float-right" src="images/icons/fan.png" data-content="فن">
-                            <img class="float-right" src="images/icons/rfid.png" data-content="RFID">
-                            <img class="float-right" src="images/icons/solar.png" data-content="سیستم خورشیدی">
+                            <i class="material-icons" data-content="روشنایی">wb_sunny</i>
+                            <i class="material-icons" data-content="راهبند">scanner</i>
+                            <i class="material-icons" data-content="درب برقی">meeting_room</i>
+                            <i class="material-icons" data-content="نورافکن">highlight</i>
+                            <i class="material-icons" data-content="فن">toys</i>
+                            <i class="material-icons" data-content="RFID">memory</i>
+                            <i class="material-icons" data-content="سیستم خورشیدی">view_comfy</i>
 
-                            <img class="float-right" src="images/icons/camera-1.png" class="mem-camera-1" data-content="دوربین حافظه 1">
-                            <img class="float-right" src="images/icons/camera-2.png" class="mem-camera-2" data-content="دوربین حافظه 2">
-                            <img class="float-right" src="images/icons/camera-3.png" class="mem-camera-3" data-content="دوربین حافظه 3">
-                            <img class="float-right" src="images/icons/camera-4.png" class="mem-camera-4" data-content="دوربین حافظه 4">
+                            <i class="material-icons" data-content="دوربین حافظه 1">filter_1</i>
+                            <i class="material-icons" data-content="دوربین حافظه 2">filter_2</i>
+                            <i class="material-icons" data-content="دوربین حافظه 3">filter_3</i>
+                            <i class="material-icons ml-auto" data-content="دوربین حافظه 4">filter_4</i>
 
-                            <img class="float-left" src="images/icons/speakers.png" data-content="سیستم صوتی">
-                            <img class="float-left" src="images/icons/alarm.png" data-content="هشدار">
+                            <input type="text" class="form-control color-picker mx-2" id="icons-color" name=""
+                            placeholder="انتخاب رنگ آیکون ها">
+                            <div class="mx-3">
+                                <b class="d-block"> سایز آیکون ها </b>
+                                <input class="input-range slider" type="range" id="icons-size" value="40" min="10" max="100" style="direction:rtl">
+                            </div>
+
+                            <i class="material-icons mr-auto" data-content="سیستم صوتی">campaign</i>
+                            <i class="material-icons" data-content="هشدار">notifications_active</i>
                         </div>
                     </div>
                     <div class="col-lg-2 ip-container scroll-design">
@@ -270,8 +277,8 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.js"></script>
-        <script src="js/main.js?v=2.9"></script>
-        <script src="js/custom.js?v=2.9"></script>
+        <script src="js/main.js?v=3.0"></script>
+        <script src="js/custom.js?v=3.0"></script>
         <!-- The javascript plugin to display page loading on top-->
         <script src="js/plugins/pace.min.js"></script>
         <!-- Page specific javascripts-->

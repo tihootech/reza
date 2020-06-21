@@ -4,7 +4,7 @@ $(document).ready(function () {
 		drawCanvas();
 	}
 
-	$( ".image-icons > img" ).draggable();
+	$( ".image-icons > i" ).draggable();
 	$( "#dragme" ).draggable();
 
 });
@@ -233,14 +233,29 @@ function updateLine(x, y) {
 /* icons toolbox */
 /*******************************/
 
-$(document).on('click', '.icons-toolbox > img', function () {
-	$(this).clone().appendTo('.image-icons');
-	$( ".image-icons > img" ).draggable();
+$(document).on('click', '.icons-toolbox > i', function () {
+	var color = $('#icons-color').val();
+	var size = $('#icons-size').val();
+	var item = $(this).clone();
+	if (color) {
+		item.css('color', color);
+	}
+	item.css('font-size', size+'px');
+	item.appendTo('.image-icons');
+	$( ".image-icons > i" ).draggable();
 });
 
-$(document).on('mousedown', '.image-icons > img', function (e) {
+$(document).on('mousedown', '.image-icons > i', function (e) {
 	if (e.which == 3) {
 		$(this).remove();
 		return false;
 	}
+});
+
+$(document).on('change', '#icons-color', function () {
+	$( ".image-icons > i" ).css('color', $(this).val());
+});
+
+$(document).on('input', '#icons-size', function () {
+	$( ".image-icons > i" ).css('font-size', $(this).val() + 'px');
 });
