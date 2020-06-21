@@ -127,6 +127,8 @@ $(document).on('change', '#btn-action', function () {
 
 $('.draw-table .already-set .ip-span').click(function () {
 
+	$('#map').removeClass('draw-mode');
+
 	$('.draw-table .already-set .ip-span').removeClass('active');
 	$(this).addClass('active');
 
@@ -138,17 +140,36 @@ $('.draw-table .already-set .ip-span').click(function () {
 
 $('[data-channel]').click(function () {
 	$('#map').addClass('draw-mode');
+	$('#map').attr('data-draw-mode', 'line');
 	$('#map').attr('data-current-channel', $(this).data('channel'))
 	$('#channels .info').show();
 	$('#map > .pl').hide();
 });
 
+$('#start-draw-rect').click(function () {
+	$('#map').addClass('draw-mode');
+	$('#map').attr('data-draw-mode', 'rect');
+	$('#map > line').hide();
+});
+
 $('.show-draw-box').click(function() {
+	$('#map').removeClass('draw-mode');
 	$('#channels > .ip-title').text($(this).data('ip')).fadeOut(250).fadeIn(250);
+	$('#rect').hide();
 	$('#channels').slideDown();
 	$('#map > line').hide();
 	$('.ip-span').removeClass('active');
-	$('#map > .new-channels').remove();
+	$('#map > .new-channels, #map > .new-rect').remove();
+});
+
+$('.draw-rect').click(function() {
+	$('#map').removeClass('draw-mode');
+	$('#rect > .ip-title').text($(this).data('ip')).fadeOut(250).fadeIn(250);
+	$('#channels').hide();
+	$('#rect').slideDown();
+	$('#map > line').hide();
+	$('.ip-span').removeClass('active');
+	$('#map > .new-channels, #map > .new-rect').remove();
 });
 
 $(document).on('click', '#map.draw-mode', function (e) {
@@ -158,16 +179,27 @@ $(document).on('click', '#map.draw-mode', function (e) {
 	var xPos = e.pageX - elm.offset().left;
 	var yPos = e.pageY - elm.offset().top;
 
-	if ($('#map > line#new-line').length) {
-		updateLine(xPos, yPos);
-		$('#map > line#new-line').addClass('line-created-'+currentChannel).removeAttr('id');
+	var mode = $(this).attr('data-draw-mode');
+
+	if ( mode == 'line') {
+		if ($('#map > line#new-line').length) {
+			updateLine(xPos, yPos);
+			$('#map > line#new-line').addClass('line-created-'+currentChannel).removeAttr('id');
+		}else {
+			createLine(xPos, yPos);
+		}
 	}else {
-		createLine(xPos, yPos);
+		if ($('#map > path#new-rect').length) {
+			updateRect(xPos, yPos);
+			$('#map > path#new-rect').addClass('rect-created').removeAttr('id');
+		}else {
+			createRect(xPos, yPos);
+		}
 	}
 
 });
 
-$(document).on('mousedown', '#map > .new-channels', function (e) {
+$(document).on('mousedown', '#map > .new-channels, #map > .new-rect', function (e) {
 	if (e.which == 3) {
 		$(this).remove();
 		return false;
@@ -183,14 +215,32 @@ $(document).on('mousemove', '#map.draw-mode', function (e) {
 	var xPos = e.pageX - elm.offset().left;
 	var yPos = e.pageY - elm.offset().top;
 
-	if ($('#map > line#new-line').length) {
-		updateLine(xPos, yPos);
+	var mode = $(this).attr('data-draw-mode');
+
+	if (mode == 'line') {
+		if ($('#map > line#new-line').length) {
+			updateLine(xPos, yPos);
+		}
+	}else {
+		if ($('#map > path#new-rect').length) {
+			updateRect(xPos, yPos);
+		}
 	}
 });
 
 $(document).on('change', '#line-colors', function () {
 	var value = $(this).val();
 	$('#map > .new-channels').css('stroke', value);
+});
+
+$(document).on('change', '#rect-color', function () {
+	var value = $(this).val();
+	$('#map > .new-rect').css('fill', value);
+});
+
+$(document).on('input', '#rect-opacity', function () {
+	var value = Number($(this).val()) / 100;
+	$('#map > path').css('opacity', value);
 });
 
 $(document).on('click', '#test-alarm', function () {
@@ -227,6 +277,25 @@ function createLine(x, y) {
 
 function updateLine(x, y) {
 	$('#map > line#new-line').attr('x2', x).attr('y2', y);
+}
+
+function createRect(x, y) {
+	var color = $('#rect-color').val() ? $('#rect-color').val() : '#fff';
+	var opacity = Number($('#rect-opacity').val()) / 100;
+	var newRect = document.createElementNS('http://www.w3.org/2000/svg','path');
+	newRect.setAttribute('id', 'new-rect');
+	newRect.setAttribute('data-init-x', x);
+	newRect.setAttribute('data-init-y', y);
+	newRect.setAttribute('style', 'opacity:'+opacity+';fill:'+color);
+	newRect.setAttribute('class', 'new-rect');
+	$("#map").append(newRect);
+}
+
+function updateRect(x2, y2) {
+	var rect = $('#map > path#new-rect');
+	x1 = rect.attr('data-init-x');
+	y1 = rect.attr('data-init-y');
+	rect.attr('d', 'M'+x1+','+y1+' '+x2+','+y1+' '+x2+','+y2+' '+x1+','+y2);
 }
 
 /*******************************/

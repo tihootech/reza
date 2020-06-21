@@ -343,6 +343,10 @@ input[type=range], input[type=number] {
 	cursor: all-scroll;
 }
 
+#map > path {
+	cursor: pointer;
+}
+
 /*******************************/
 /* Media Queries */
 /*******************************/

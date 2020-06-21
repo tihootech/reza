@@ -13,8 +13,8 @@
         <link rel="stylesheet" type="text/css" href="css/animate.css" />
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.css">
         <!-- Main CSS-->
-        <link rel="stylesheet" type="text/css" href="css/main.css?v=3.0" />
-        <link rel="stylesheet" type="text/css" href="css/custom.css?v=3.0" />
+        <link rel="stylesheet" type="text/css" href="css/main.css?v=3.1" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css?v=3.1" />
 
     </head>
     <body>
@@ -122,7 +122,6 @@
                                 <line class="hidden pl line-3 animate__animated animate__flash" x1="666" y1="450" x2="777" y2="450" style="stroke:#05f600" />
                                 <line class="hidden pl line-3 animate__animated animate__flash" x1="777" y1="450" x2="700" y2="400" style="stroke:#05f600" />
 
-
                             </svg>
 
                         </div>
@@ -155,7 +154,7 @@
                         </div>
                     </div>
                     <div class="col-lg-2 ip-container scroll-design">
-                        <div class="collapse my-2 text-center" id="channels" dir="ltr">
+                        <div class="hidden my-2 text-center" id="channels">
                             <h6 class="numeric ip-title"></h6>
                             <div class="text-danger info hidden">
                                 *
@@ -182,6 +181,23 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="hidden my-2 text-center" id="rect">
+                            <h6 class="numeric ip-title"></h6>
+                            <div class="w-75 my-2 d-inline-block">
+                                <label for="line-colors" class="my-0">رنگ مستطیل</label>
+                                <input id="rect-color" class="form-control form-control-sm color-picker" autocomplete="off">
+                            </div>
+                            <div class="w-75 my-2 d-inline-block">
+                                <label class="d-block"> تعیین غلظت </label>
+                                <input class="input-range slider" type="range" id="rect-opacity" value="80" min="0" max="100" style="direction:rtl">
+                            </div>
+                            <div class="w-50 d-inline-block">
+                                <button type="button" class="btn btn-block btn-primary btn-sm" id="start-draw-rect"> شروع رسم </button>
+                            </div>
+                            <div class="w-25 d-inline-block">
+                                <button type="button" class="btn btn-block btn-primary btn-sm" onclick="location.reload()"> تایید </button>
+                            </div>
+                        </div>
                         <table class="table table-sm draw-table text-center">
                             <thead>
                                 <tr>
@@ -193,8 +209,11 @@
 
                                 <tr class="already-set">
                                     <td>
-                                        <a href="javascript:void" class="show-draw-box" data-ip="192.168.1.1" data-content="ویرایش">
+                                        <a href="javascript:void" class="show-draw-box" data-ip="192.168.1.1" data-content="ویرایش کانال ها">
                                             <i class="material-icons">edit</i>
+                                        </a>
+                                        <a href="javascript:void" class="draw-rect" data-ip="192.100.20.1" data-content="رسم مستطیل">
+                                            <i class="material-icons">settings_overscan</i>
                                         </a>
                                     </td>
                                     <td>
@@ -205,7 +224,10 @@
 
                                 <tr class="to-set">
                                     <td>
-                                        <a href="javascript:void" class="show-draw-box" data-ip="192.100.20.1" data-content="تنظیم مختصات">
+                                        <a href="javascript:void" class="show-draw-box" data-ip="192.100.20.1" data-content="ویرایش کانال ها">
+                                            <i class="material-icons">edit</i>
+                                        </a>
+                                        <a href="javascript:void" class="draw-rect" data-ip="192.100.20.1" data-content="رسم مستطیل">
                                             <i class="material-icons">settings_overscan</i>
                                         </a>
                                     </td>
@@ -217,7 +239,10 @@
 
                                 <tr class="to-set">
                                     <td>
-                                        <a href="javascript:void" class="show-draw-box" data-ip="192.55.1.1" data-content="تنظیم مختصات">
+                                        <a href="javascript:void" class="show-draw-box" data-ip="192.55.1.1" data-content="ویرایش کانال ها">
+                                            <i class="material-icons">edit</i>
+                                        </a>
+                                        <a href="javascript:void" class="draw-rect" data-ip="192.55.1.1" data-content="رسم مستطیل">
                                             <i class="material-icons">settings_overscan</i>
                                         </a>
                                     </td>
@@ -229,7 +254,10 @@
 
                                 <tr class="to-set">
                                     <td>
-                                        <a href="javascript:void" class="show-draw-box" data-ip="192.178.30.20" data-content="تنظیم مختصات">
+                                        <a href="javascript:void" class="show-draw-box" data-ip="192.178.30.20" data-content="ویرایش کانال ها">
+                                            <i class="material-icons">edit</i>
+                                        </a>
+                                        <a href="javascript:void" class="draw-rect" data-ip="192.178.30.20" data-content="رسم مستطیل">
                                             <i class="material-icons">settings_overscan</i>
                                         </a>
                                     </td>
@@ -241,8 +269,11 @@
 
                                 <tr class="already-set">
                                     <td>
-                                        <a href="javascript:void" class="show-draw-box" data-ip="192.168.9.9" data-content="ویرایش">
+                                        <a href="javascript:void" class="show-draw-box" data-ip="192.168.9.9" data-content="ویرایش کانال ها">
                                             <i class="material-icons">edit</i>
+                                        </a>
+                                        <a href="javascript:void" class="draw-rect" data-ip="192.168.9.9" data-content="رسم مستطیل">
+                                            <i class="material-icons">settings_overscan</i>
                                         </a>
                                     </td>
                                     <td>
@@ -253,8 +284,11 @@
 
                                 <tr class="already-set">
                                     <td>
-                                        <a href="javascript:void" class="show-draw-box" data-ip="192.168.65.36" data-content="ویرایش">
+                                        <a href="javascript:void" class="show-draw-box" data-ip="192.168.65.36" data-content="ویرایش کانال ها">
                                             <i class="material-icons">edit</i>
+                                        </a>
+                                        <a href="javascript:void" class="draw-rect" data-ip="192.168.65.36" data-content="رسم مستطیل">
+                                            <i class="material-icons">settings_overscan</i>
                                         </a>
                                     </td>
                                     <td>
@@ -277,8 +311,8 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.js"></script>
-        <script src="js/main.js?v=3.0"></script>
-        <script src="js/custom.js?v=3.0"></script>
+        <script src="js/main.js?v=3.1"></script>
+        <script src="js/custom.js?v=3.1"></script>
         <!-- The javascript plugin to display page loading on top-->
         <script src="js/plugins/pace.min.js"></script>
         <!-- Page specific javascripts-->
