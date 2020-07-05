@@ -32,11 +32,13 @@
 		placement:'top',
 		html:true,
 	});
-	$('.color-picker').spectrum({
-		type: "component",
-		cancelText: 'انصراف',
-    	chooseText: 'تایید'
-	});
+	if ($('.color-picker').length) {
+		$('.color-picker').spectrum({
+			type: "component",
+			cancelText: 'انصراف',
+	    	chooseText: 'تایید'
+		});
+	}
 	// $('.select2').select2({
     //    width: '100%',
     // });

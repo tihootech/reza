@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> داشبورد </title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Font-icon css-->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.css">
+
+        <!-- styles : define vars -->
+        <style>
+            :root {
+                --bg: #fff;
+                --color: #000;
+                --primary: #009688;
+            }
+        </style>
+
+        <!-- Main CSS-->
+        <link rel="stylesheet" type="text/css" href="css/main.css?v=3.1" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css?v=3.1" />
+
+    </head>
+    <body class="app sidebar-mini">
+        <nav class="navbar navbar-expand-lg navbar-dark bootstrap-navbar">
+            <a class="navbar-brand" href="#"> نرم افزار سامانه حفاظت پیرامونی </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            <i class="fa fa-folder-open ml-1"></i>
+                            پرونده
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Another action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            <i class="fa fa-cogs ml-1"></i>
+                            تنظیمات دستگاه
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Another action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            <i class="fa fa-tv ml-1"></i>
+                            تنظیمات نمایش
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Another action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            <i class="fa fa-user ml-1"></i>
+                            مدیریت کاربر
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Another action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            <i class="fa fa-random ml-1"></i>
+                            کنترل خروجی ها
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Another action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            <i class="fa fa-wrench ml-1"></i>
+                            تعمیرات و نگهداری
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Another action</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-circle-o mx-1"></i> Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item float-left">
+                        <a class="nav-link" href="#"> <i class="material-icons">lock</i> </a>
+                    </li>
+                    <li class="nav-item float-left">
+                        <a class="nav-link" href="#"> <i class="material-icons">power_settings_new</i> </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <main class="app-content">
+
+            <div class="tile m-3 m-md-5">
+
+                <form class="row text-center justify-content-center">
+
+                    <div class="col-md-4">
+
+                        <h3> تم های دارک </h3>
+                        <hr>
+
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="dark-theme-1" value="dark-theme-1" name="theme" class="change-theme custom-control-input" data-color="#80ffdb" data-type="dark">
+                                    <div class="set-theme" style="background:#333;border-color:#80ffdb"><span style="background:#80ffdb"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="dark-theme-1">
+                                        <span class="mr-2"> دارک-1 </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="dark-theme-2" value="dark-theme-2" name="theme" class="change-theme custom-control-input" data-color="#ffadad" data-type="dark">
+                                    <div class="set-theme" style="background:#333;border-color:#ffadad"><span style="background:#ffadad"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="dark-theme-2">
+                                        <span class="mr-2"> دارک-2 </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="dark-theme-3" value="dark-theme-3" name="theme" class="change-theme custom-control-input" data-color="#90e0ef" data-type="dark">
+                                    <div class="set-theme" style="background:#333;border-color:#90e0ef"><span style="background:#90e0ef"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="dark-theme-3">
+                                        <span class="mr-2"> دارک-3 </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-8">
+
+                        <h3> تم های لایت </h3>
+                        <hr>
+
+                        <div class="row">
+
+                            <div class="col-md-2 my-2">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="light-theme-1" value="light-theme-1" name="theme" class="change-theme custom-control-input" data-color="#009688" data-type="light">
+                                    <div class="set-theme" style="background:#fff;border-color:#009688"><span style="background:#009688"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="light-theme-1">
+                                        <span class="mr-2"> تم اصلی </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-2 my-2">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="light-theme-2" value="light-theme-2" name="theme" class="change-theme custom-control-input" data-color="#e63946" data-type="light">
+                                    <div class="set-theme" style="background:#fff;border-color:#e63946"><span style="background:#e63946"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="light-theme-2">
+                                        <span class="mr-2"> لایت-2 </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-2 my-2">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="light-theme-3" value="light-theme-3" name="theme" class="change-theme custom-control-input" data-color="#1d3557" data-type="light">
+                                    <div class="set-theme" style="background:#fff;border-color:#1d3557"><span style="background:#1d3557"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="light-theme-3">
+                                        <span class="mr-2"> لایت-3 </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 my-2">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="light-theme-4" value="light-theme-4" name="theme" class="change-theme custom-control-input" data-color="#ff006e" data-type="light">
+                                    <div class="set-theme" style="background:#fff;border-color:#ff006e"><span style="background:#ff006e"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="light-theme-4">
+                                        <span class="mr-2"> لایت-4 </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 my-2">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="light-theme-5" value="light-theme-5" name="theme" class="change-theme custom-control-input" data-color="#05668d" data-type="light">
+                                    <div class="set-theme" style="background:#fff;border-color:#05668d"><span style="background:#05668d"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="light-theme-5">
+                                        <span class="mr-2"> لایت-5 </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 my-2">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="light-theme-6" value="light-theme-6" name="theme" class="change-theme custom-control-input" data-color="#774936" data-type="light">
+                                    <div class="set-theme" style="background:#fff;border-color:#774936"><span style="background:#774936"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="light-theme-6">
+                                        <span class="mr-2"> لایت-6 </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 my-2">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="light-theme-7" value="light-theme-7" name="theme" class="change-theme custom-control-input" data-color="#001233" data-type="light">
+                                    <div class="set-theme" style="background:#fff;border-color:#001233"><span style="background:#001233"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="light-theme-7">
+                                        <span class="mr-2"> لایت-7 </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 my-2">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="light-theme-8" value="light-theme-8" name="theme" class="change-theme custom-control-input" data-color="#007f5f" data-type="light">
+                                    <div class="set-theme" style="background:#fff;border-color:#007f5f"><span style="background:#007f5f"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="light-theme-8">
+                                        <span class="mr-2"> لایت-8 </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 my-2">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="light-theme-9" value="light-theme-9" name="theme" class="change-theme custom-control-input" data-color="#540b0e" data-type="light">
+                                    <div class="set-theme" style="background:#fff;border-color:#540b0e"><span style="background:#540b0e"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="light-theme-9">
+                                        <span class="mr-2"> لایت-9 </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 my-2">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="light-theme-10" value="light-theme-10" name="theme" class="change-theme custom-control-input" data-color="#293241" data-type="light">
+                                    <div class="set-theme" style="background:#fff;border-color:#293241"><span style="background:#293241"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="light-theme-10">
+                                        <span class="mr-2"> لایت-10 </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 my-2">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="light-theme-11" value="light-theme-11" name="theme" class="change-theme custom-control-input" data-color="#b56576" data-type="light">
+                                    <div class="set-theme" style="background:#fff;border-color:#b56576"><span style="background:#b56576"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="light-theme-11">
+                                        <span class="mr-2"> لایت-11 </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 my-2">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="light-theme-12" value="light-theme-12" name="theme" class="change-theme custom-control-input" data-color="#ff6b6b" data-type="light">
+                                    <div class="set-theme" style="background:#fff;border-color:#ff6b6b"><span style="background:#ff6b6b"></span></div>
+                                    <br>
+                                    <label class="custom-control-label mt-2" for="light-theme-12">
+                                        <span class="mr-2"> لایت-12 </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <hr class="w-100">
+
+                    <div class="col-md-6">
+                        <h3> ساخت تم </h3>
+
+                        <div class="row justify-content-center">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="new-theme-type"> نوع </label>
+                                    <select class="form-control" id="new-theme-type" name="theme_type">
+                                        <option value="light"> لایت </option>
+                                        <option value="dark"> دارک </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="new-theme-primary-color"> رنگ اصلی </label>
+                                    <input id="new-theme-primary-color" type="text" name="primary_color" class="color-picker form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 align-self-center">
+                                <button type="button" class="btn btn-primary btn-block" id="create-new-theme"> تایید تم جدید </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </main>
+
+        <!-- Essential javascripts for application to work-->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.js"></script>
+        <script src="js/main.js?v=3.1"></script>
+        <script src="js/custom.js?v=3.1"></script>
+        <!-- The javascript plugin to display page loading on top-->
+        <script src="js/plugins/pace.min.js"></script>
+        <script src="js/plugins/sweetalert.min.js"></script>
+        <!-- Page specific javascripts-->
+        <script type="text/javascript" src="js/plugins/chart.js"></script>
+    </body>
+</html>

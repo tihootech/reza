@@ -4,10 +4,73 @@ $(document).ready(function () {
 		drawCanvas();
 	}
 
-	$( ".image-icons > i" ).draggable();
-	$( "#dragme" ).draggable();
+	if ($( ".image-icons > i" ).length) {
+		$( ".image-icons > i" ).draggable();
+	}
+	if ($( "#dragme" ).length) {
+		$( "#dragme" ).draggable();
+	}
+
+	if (localStorage.getItem('primary')) {
+		setTheme();
+	}
+
+	// new theme
+
+
 
 });
+
+// set theme color
+$(document).on('change', '.change-theme', function () {
+	var primary = $(this).data('color');
+	var type = $(this).data('type');
+
+	localStorage.setItem('type', type);
+	if (type == 'light') {
+		localStorage.setItem('primary', primary);
+		localStorage.setItem('bg', '#fff');
+		localStorage.setItem('color', '#000');
+	}else {
+		localStorage.setItem('primary', primary);
+		localStorage.setItem('bg', '#333');
+		localStorage.setItem('color', '#fff');
+	}
+
+	setTheme();
+});
+
+$(document).on('click', '#create-new-theme', function () {
+	var primary = $('#new-theme-primary-color').val();
+	var type = $('#new-theme-type').val();
+
+	if (primary) {
+		localStorage.setItem('type', type);
+		if (type == 'light') {
+			localStorage.setItem('primary', primary);
+			localStorage.setItem('bg', '#fff');
+			localStorage.setItem('color', '#000');
+		}else {
+			localStorage.setItem('primary', primary);
+			localStorage.setItem('bg', '#333');
+			localStorage.setItem('color', '#fff');
+		}
+
+		setTheme();
+	}
+});
+
+function setTheme() {
+	document.documentElement.style.setProperty('--primary', localStorage.getItem('primary'));
+	document.documentElement.style.setProperty('--bg', localStorage.getItem('bg'));
+	document.documentElement.style.setProperty('--color', localStorage.getItem('color'));
+	$('html').attr('theme-type', localStorage.getItem('type'));
+	if (localStorage.getItem('type') == 'light') {
+		$('nav.navbar').removeClass('navbar-light').addClass('navbar-dark');
+	}else {
+		$('nav.navbar').removeClass('navbar-dark').addClass('navbar-light');
+	}
+}
 
 function drawCanvas() {
 	var originalHeight = $('#map').data('h');

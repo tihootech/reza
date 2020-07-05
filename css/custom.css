@@ -14,18 +14,18 @@ body {
 
 
 .sp-choose {
-	background-color: #009688 !important;
+	background-color: var(--primary) !important;
 }
 .sp-choose:hover {
 	background-color: #aa004e !important;
 }
 
 .right-side.with-border {
-	border: 2px solid #009688;
+	border: 2px solid var(--primary);
 }
 
 .map-container {
-	border-bottom: 2px solid #009688;
+	border-bottom: 2px solid var(--primary);
 	width: 100%;
 	background-size: cover;
 	position: relative;
@@ -53,11 +53,11 @@ body {
 
 .map-container .full-screen i {
 	font-size: 2em;
-	color: #009688;
+	color: var(--primary);
 }
 
 .ip-container {
-	border: 2px solid #009688;
+	border: 2px solid var(--primary);
 	overflow-y: auto;
 	overflow-x: hidden;
 	padding: 0;
@@ -141,7 +141,7 @@ body {
     width: 120px;
     height: 120px;
     background: rgba(255,255,255,0.66);
-    border: 2px  solid #009688;
+    border: 2px  solid var(--primary);
 	border-radius: 50%;
 	display: flex;
 	flex-wrap: wrap;
@@ -158,26 +158,57 @@ body {
 }
 
 #dragme > div:nth-child(1) {
-	border-left: 1px solid #009688;
-	border-bottom: 1px solid #009688;
+	border-left: 1px solid var(--primary);
+	border-bottom: 1px solid var(--primary);
 	border-top-right-radius: 100%;
 
 }
 
 #dragme > div:nth-child(2) {
-	border-bottom: 1px solid #009688;
+	border-bottom: 1px solid var(--primary);
 	border-top-left-radius: 100%;
 
 }
 
 #dragme > div:nth-child(3) {
-	border-left: 1px solid #009688;
+	border-left: 1px solid var(--primary);
 	border-bottom-right-radius: 100%;
 }
 
 #dragme > div:nth-child(4) {
 	border-bottom-left-radius: 100%;
 }
+
+/*******************************/
+/* Themes */
+/*******************************/
+
+.set-theme {
+	display: inline-flex;
+	width: 100px;
+	height: 50px;
+	border-radius: 5px;
+	justify-content: center;
+	align-items: center;
+	border-width: 2px;
+	border-style: solid;
+}
+
+.set-theme > span {
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	border-radius: 3px;
+}
+
+.navbar-light .nav-item .nav-link {
+	color: #333 !important;
+}
+
+html[theme-type=dark] thead th {
+	color: var(--primary);
+}
+
 
 /*******************************/
 /* Scrollbar */
@@ -206,7 +237,7 @@ body {
 
 /* Handle */
 .scroll-design::-webkit-scrollbar-thumb {
-  background: #009688;
+  background: var(--primary);
   border-radius: 10px;
 }
 
@@ -241,7 +272,7 @@ input[type=range], input[type=number] {
 }
 
 .bootstrap-navbar {
-	background-color: #009688;
+	background-color: var(--primary);
 }
 
 .bootstrap-navbar .nav-item .nav-link {
@@ -283,11 +314,11 @@ input[type=range], input[type=number] {
 }
 
 .draw-table .already-set .ip-span:hover {
-	color: #009688;
+	color: var(--primary);
 }
 
 .draw-table .already-set .ip-span.active {
-	color: #009688;
+	color: var(--primary);
 	font-weight: bold;
 }
 
@@ -334,7 +365,7 @@ input[type=range], input[type=number] {
 
 .draw-page .image-icons > i, .icons-toolbox > i {
 	font-size: 40px;
-	color: #009688;
+	color: var(--primary);
 	margin: 10px;
 	cursor: pointer;
 }
@@ -433,7 +464,7 @@ input[type=range], input[type=number] {
   appearance: none;
   width: 15px;
   height: 15px;
-  background: #009688;
+  background: var(--primary);
   cursor: pointer;
   border-radius: 50%;
 }
@@ -441,7 +472,7 @@ input[type=range], input[type=number] {
 .slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: #009688;
+  background: var(--primary);
   cursor: pointer;
   border-radius: 50%;
 }
@@ -579,11 +610,11 @@ input[type=range], input[type=number] {
 }
 
 .switch input:checked + .mslider {
-  background-color: #009688;
+  background-color: var(--primary);
 }
 
 .switch input:focus + .mslider {
-  box-shadow: 0 0 1px #009688;
+  box-shadow: 0 0 1px var(--primary);
 }
 
 .switch input:checked + .mslider:before {
