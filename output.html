@@ -18,8 +18,9 @@
                 --primary: #009688;
             }
         </style>
-        
+
         <!-- Main CSS-->
+        <link rel="stylesheet" type="text/css" href="css/pdp.css" />
         <link rel="stylesheet" type="text/css" href="css/main.css?v=3.2" />
         <link rel="stylesheet" type="text/css" href="css/custom.css?v=3.2" />
 
@@ -114,120 +115,49 @@
 
         <main class="app-content">
 
-            <div class="tile full-tile">
+            <div class="tile m-3 m-md-5">
 
-                <div class="row">
-                    <div class="col-lg-2 scroll-design search-box">
-
-                        <div class="text-center mb-2">
-                            <a href="#" class="btn btn-primary"> <i class="fa fa-search ml-1"></i> جستجو </a>
-                        </div>
-
-                        <table class="table table-sm text-center">
-                            <thead>
-                                <tr>
-                                    <th> IP </th>
-                                    <th colspan="2"> عملیات </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr data-ip="199.199.199.119" data-mac="00:0a:95:9d:68:16">
-                                    <td> 199.199.199.119 </td>
-                                    <td> <a class="searchbox-config" href="javascript:void"> <i class="material-icons">settings</i> </a> </td>
-                                    <td> <a class="searchbox-delete text-danger" href="javascript:void"> <i class="material-icons">delete</i> </a> </td>
-                                </tr>
-                                <tr data-ip="199.120.199.80" data-mac="00:0a:33:9d:68:16">
-                                    <td> 199.120.199.80 </td>
-                                    <td> <a class="searchbox-config" href="javascript:void"> <i class="material-icons">settings</i> </a> </td>
-                                    <td> <a class="searchbox-delete text-danger" href="javascript:void"> <i class="material-icons">delete</i> </a> </td>
-                                </tr>
-                                <tr data-ip="199.70.199.1" data-mac="00:0a:85:9d:32:20">
-                                    <td> 199.199.70.1 </td>
-                                    <td> <a class="searchbox-config" href="javascript:void"> <i class="material-icons">settings</i> </a> </td>
-                                    <td> <a class="searchbox-delete text-danger" href="javascript:void"> <i class="material-icons">delete</i> </a> </td>
-                                </tr>
-                                <tr data-ip="100.199.199.119" data-mac="00:0a:95:9d:75:12">
-                                    <td> 100.199.199.119 </td>
-                                    <td> <a class="searchbox-config" href="javascript:void"> <i class="material-icons">settings</i> </a> </td>
-                                    <td> <a class="searchbox-delete text-danger" href="javascript:void"> <i class="material-icons">delete</i> </a> </td>
-                                </tr>
-                                <tr data-ip="168.1.199.20" data-mac="00:0a:41:9d:32:74">
-                                    <td> 168.1.199.20 </td>
-                                    <td> <a class="searchbox-config" href="javascript:void"> <i class="material-icons">settings</i> </a> </td>
-                                    <td> <a class="searchbox-delete text-danger" href="javascript:void"> <i class="material-icons">delete</i> </a> </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <form class="row justify-content-center">
+                    <div class="form-group col-md-3">
+                        <label for="alarm-type"> انتخاب کاربر </label>
+                        <select class="select2" name="alarm_type" id="alarm-type" multiple>
+                            <option value=""> -- جستجو کنید -- </option>
+                            <option value="1">  کاربر 1 </option>
+                            <option value="2">  کاربر 2 </option>
+                            <option value="3">  کاربر 3 </option>
+                            <option value="4">  کاربر 4 </option>
+                            <option value="5">  کاربر 5 </option>
+                            <option value="6">  کاربر 6 </option>
+                        </select>
                     </div>
-                    <div class="col-lg-10 p-3">
-
-                        <div id="alert-info" class="alert alert-info">
-                            لطفا یکی از IP های موجود در جدول سمت راست را برای مدیریت انتخاب کنید.
-                        </div>
-
-                        <div id="config-box">
-                            <form class="card">
-                                <div class="card-header">
-                                    <h3> تغییر IP </h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="form-group col-lg-4">
-                                            <label for="mac"> MAC </label>
-                                            <input type="text" name="mac" id="mac" class="form-control" required readonly>
-                                        </div>
-                                        <div class="form-group col-lg-4">
-                                            <label for="old-ip"> IP فعلی </label>
-                                            <input type="text" name="old-ip" id="old-ip" class="form-control" required readonly>
-                                        </div>
-                                        <div class="form-group col-lg-4">
-                                            <label for="new-ip"> IP جدید </label>
-                                            <input type="text" name="new-ip" id="new-ip" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-primary"> ارسال </button>
-                                </div>
-                            </form>
-
-                            <form class="card mt-3">
-                                <div class="card-header">
-                                    <h3> ثبت دستگاه </h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="form-group col-lg-3">
-                                            <label for="the-ip"> IP </label>
-                                            <input type="text" name="the-ip" id="the-ip" class="form-control" required readonly>
-                                        </div>
-                                        <div class="form-group col-lg-3">
-                                            <label for="zone-1"> زون اول </label>
-                                            <input type="text" name="zone-1" id="zone-1" class="form-control" required>
-                                        </div>
-                                        <div class="form-group col-lg-3">
-                                            <label for="zone-2"> زون دوم </label>
-                                            <input type="text" name="zone-2" id="zone-2" class="form-control" required>
-                                        </div>
-                                        <div class="form-group col-lg-3">
-                                            <label for="device"> نوع دستگاه </label>
-                                            <select class="form-control" required name="device" id="device">
-                                                <option value=""> -- انتخاب کنید -- </option>
-                                                <option> فنس حساس </option>
-                                                <option> فنس الکتریکی </option>
-                                                <option> سنسور فنی </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-primary"> ثبت </button>
-                                </div>
-                            </form>
-                        </div>
-
+                    <div class="form-group col-md-2">
+                        <label for="alarm-type"> نوع آلارم </label>
+                        <select class="form-control" name="alarm_type" id="alarm-type">
+                            <option value="1">  آلارم نوع 1 </option>
+                            <option value="2">  آلارم نوع 2 </option>
+                            <option value="3">  آلارم نوع 3 </option>
+                            <option value="4">  آلارم نوع 4 </option>
+                            <option value="5">  آلارم نوع 5 </option>
+                            <option value="6">  آلارم نوع 6 </option>
+                        </select>
                     </div>
-                </div>
+                    <div class="form-group col-md-2">
+                        <label for="date-from"> تاریخ از </label>
+                        <input type="text" name="date_from" id="date-from" class="form-control pdp">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="date-till"> تاریخ تا </label>
+                        <input type="text" name="date_till" id="date-till" class="form-control pdp">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="ip"> IP </label>
+                        <input type="text" name="ip" id="ip" class="form-control">
+                    </div>
+                    <hr class="w-100">
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary btn-block"> تایید و دریافت خروجی </button>
+                    </div>
+                </form>
 
             </div>
 
@@ -237,10 +167,12 @@
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/pdp.min.js"></script>
         <script src="js/main.js?v=3.2"></script>
         <script src="js/custom.js?v=3.2"></script>
         <!-- The javascript plugin to display page loading on top-->
         <script src="js/plugins/pace.min.js"></script>
+        <script src="js/plugins/select2.min.js"></script>
         <script src="js/plugins/sweetalert.min.js"></script>
         <!-- Page specific javascripts-->
         <script type="text/javascript" src="js/plugins/chart.js"></script>

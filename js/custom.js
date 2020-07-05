@@ -10,6 +10,14 @@ $(document).ready(function () {
 	if ($( "#dragme" ).length) {
 		$( "#dragme" ).draggable();
 	}
+	if ($('.pdp').length) {
+		$('.pdp').persianDatepicker();
+	}
+	if ($('.select2').length) {
+		$('.select2').select2({
+			width: '100%'
+		});
+	}
 
 	if (localStorage.getItem('primary')) {
 		setTheme();
