@@ -1,9 +1,10 @@
 $(document).ready(function () {
 
+
+	// inits
 	if ($('#map').length) {
 		drawCanvas();
 	}
-
 	if ($( ".image-icons > i" ).length) {
 		$( ".image-icons > i" ).draggable();
 	}
@@ -19,11 +20,38 @@ $(document).ready(function () {
 		});
 	}
 
+	// set theme
 	if (localStorage.getItem('primary')) {
 		setTheme();
 	}
 
-	// new theme
+	// data table init
+	if ($('.data-table').length) {
+		$('.data-table').DataTable({
+			language: {
+				processing: "درحال پردازش...",
+				search: "جستجو :",
+				lengthMenu: " تعدا آیتم ها در هر صفحه _MENU_",
+				info: "نمایش _START_ تا _END_ از _TOTAL_ آیتم",
+				infoEmpty: "0 آیتم یافت شد.",
+				infoFiltered: "(کل آیتم ها : _MAX_ )",
+				infoPostFix: "",
+				loadingRecords: "در حال بارگذاری...",
+				zeroRecords: "موردی یافت نشد",
+				emptyTable: "داده ای در جدول وجود ندارد",
+				paginate: {
+					first: "ابتدا",
+					previous: "قبلی",
+					next: "بعدی",
+					last: "انتها"
+				},
+				aria: {
+					sortAscending: ": چینش به صورت صعودی",
+					sortDescending: ": چینش به صورت نزولی"
+				}
+			}
+		});
+	}
 
 
 

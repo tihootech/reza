@@ -631,3 +631,39 @@ input[type=range], input[type=number] {
 .mslider.round:before {
   border-radius: 50%;
 }
+
+
+
+/*******************************/
+/* Data Table */
+/*******************************/
+
+.dataTables_filter input {
+    margin-right: 10px;
+}
+
+.dataTables_length select {
+    margin-left: 10px;
+}
+
+.dataTables_filter {
+    display: flex;
+}
+.dataTables_filter > label {
+    margin-right: auto;
+    min-width: 300px;
+}
+
+.page-item:first-child .page-link {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
+}
+
+.page-item:last-child .page-link {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+}

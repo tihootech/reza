@@ -20,8 +20,8 @@
         </style>
 
         <!-- Main CSS-->
-        <link rel="stylesheet" type="text/css" href="css/main.css?v=3.2" />
-        <link rel="stylesheet" type="text/css" href="css/custom.css?v=3.2" />
+        <link rel="stylesheet" type="text/css" href="css/main.css?v=3.3" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css?v=3.3" />
 
     </head>
     <body>
@@ -767,13 +767,193 @@
 
                                     </div>
                                     <div class="tab-pane fade" id="tab-b-settings">
-                                        Under Construction...
+
+                                        <div class="card c-card border-primary">
+                                            <div class="card border-primary shadow text-primary p-2">
+                                                <h6 class="m-0"> تنظیمات کانال B </h6>
+                                            </div>
+
+                                            <div class="row justify-content-center mt-4 mt-md-3">
+                                                <div class="col-md-3 col-6 align-self-center">
+                                                    <b> بریده شدن کابل </b>
+                                                </div>
+                                                <div class="col-md-3 col-6">
+                                                    <label class="switch">
+                                                        <input type="checkbox">
+                                                        <span class="mslider round"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <hr class="mt-2">
+
+                                            <div class="container-fluid">
+                                                <div class="row justify-content-around">
+                                                    <div class="col-md-5 my-2">
+                                                        <b class="d-block"> CAPTURE </b>
+                                                        <input class="input-range slider" type="range" value="20" min="0" max="70">
+                                                        <input class="range-value my-2 form-control form-control-sm" type="number" value="20" min="0" max="70">
+                                                    </div>
+                                                    <div class="col-md-5 my-2">
+                                                        <b class="d-block"> SMD </b>
+                                                        <input class="input-range slider" type="range" value="20" min="0" max="70">
+                                                        <input class="range-value my-2 form-control form-control-sm" type="number" value="20" min="0" max="70">
+                                                    </div>
+                                                    <div class="col-md-5 my-2">
+                                                        <b class="d-block"> TIMEOUT </b>
+                                                        <input class="input-range slider" type="range" value="20" min="0" max="70">
+                                                        <input class="range-value my-2 form-control form-control-sm" type="number" value="20" min="0" max="70">
+                                                    </div>
+                                                    <div class="col-md-5 my-2">
+                                                        <b class="d-block"> THR </b>
+                                                        <input class="input-range slider" type="range" value="20" min="0" max="70">
+                                                        <input class="range-value my-2 form-control form-control-sm" type="number" value="20" min="0" max="70">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="card c-card border-primary">
+                                            <div class="card border-primary shadow text-primary p-2">
+                                                <h6 class="m-0"> تنظیمات سوئیچ B </h6>
+                                            </div>
+                                            <div class="text-primary inside pb-2">
+                                                <div class="container">
+                                                    <div class="row justify-content-around">
+                                                        <div class="col-7">
+                                                            <b class="d-block"> RELAY TIME (SEC) </b>
+                                                            <input class="input-range slider" type="range" value="20" min="0" max="70">
+                                                            <input class="range-value my-2 form-control form-control-sm" type="number" value="20" min="0" max="70">
+                                                        </div>
+                                                        <div class="col-3 text-left">
+                                                            <div class="custom-controls-stacked" dir="ltr">
+                                                                <div class="animated-radio-button">
+                                                                    <label>
+                                                                        <input name="relay" type="radio" checked><span class="label-text">DISABLE</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="animated-radio-button">
+                                                                    <label>
+                                                                        <input name="relay" type="radio"><span class="label-text">N.C</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="animated-radio-button">
+                                                                    <label>
+                                                                        <input name="relay" type="radio"><span class="label-text">N.O</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                     <div class="tab-pane fade" id="tab-a-intensity">
-                                        Under Construction...
+
+                                        <div class="card c-card border-primary">
+                                            <div class="card border-primary shadow text-primary p-2">
+                                                <h6 class="m-0"> تنظیمات شدت کانال A </h6>
+                                            </div>
+                                            <div class="text-primary inside pb-2">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-5 mx-auto">
+                                                            <b class="d-flex justify-content-between">
+                                                                <span>حداکثر</span>
+                                                                <span>حداقل</span>
+                                                            </b>
+                                                            <input class="input-range slider" type="range" value="20" min="0" max="70">
+                                                            <input class="range-value my-2 form-control form-control-sm" type="number" value="20" min="0" max="70">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <a href="#" class="btn btn-primary btn-sm"> ثبت </a>
+                                                            <a href="#" class="btn btn-primary btn-sm"> به روز رسانی </a>
+                                                            <a href="#" class="btn btn-primary btn-sm"> + </a>
+                                                            <a href="#" class="btn btn-primary btn-sm"> - </a>
+                                                            <a href="#" class="btn btn-primary btn-sm"> ریست </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card c-card border-primary">
+                                            <div class="card border-primary shadow text-primary p-2">
+                                                <h6 class="m-0"> تنظیمات کانال A دستی </h6>
+                                            </div>
+                                            <div class="text-primary inside pb-2">
+
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-5 mx-auto">
+                                                            <label> Gain </label>
+                                                            <input type="text" class="form-control form-control-sm" name="name" value="">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <a href="#" class="btn btn-primary btn-sm"> ثبت </a>
+                                                            <a href="#" class="btn btn-primary btn-sm"> به روز رسانی </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
                                     </div>
                                     <div class="tab-pane fade" id="tab-b-intensity">
-                                        Under Construction...
+
+                                        <div class="card c-card border-primary">
+                                            <div class="card border-primary shadow text-primary p-2">
+                                                <h6 class="m-0"> تنظیمات شدت کانال B </h6>
+                                            </div>
+                                            <div class="text-primary inside pb-2">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-5 mx-auto">
+                                                            <b class="d-flex justify-content-between">
+                                                                <span>حداکثر</span>
+                                                                <span>حداقل</span>
+                                                            </b>
+                                                            <input class="input-range slider" type="range" value="20" min="0" max="70">
+                                                            <input class="range-value my-2 form-control form-control-sm" type="number" value="20" min="0" max="70">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <a href="#" class="btn btn-primary btn-sm"> ثبت </a>
+                                                            <a href="#" class="btn btn-primary btn-sm"> به روز رسانی </a>
+                                                            <a href="#" class="btn btn-primary btn-sm"> + </a>
+                                                            <a href="#" class="btn btn-primary btn-sm"> - </a>
+                                                            <a href="#" class="btn btn-primary btn-sm"> ریست </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card c-card border-primary">
+                                            <div class="card border-primary shadow text-primary p-2">
+                                                <h6 class="m-0"> تنظیمات کانال B دستی </h6>
+                                            </div>
+                                            <div class="text-primary inside pb-2">
+
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-5 mx-auto">
+                                                            <label> Gain </label>
+                                                            <input type="text" class="form-control form-control-sm" name="name" value="">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <a href="#" class="btn btn-primary btn-sm"> ثبت </a>
+                                                            <a href="#" class="btn btn-primary btn-sm"> به روز رسانی </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
                                     </div>
                                     <div class="tab-pane fade" id="settings-tab">
                                         <table class="table table-sm table-bordered table-striped">
@@ -864,11 +1044,7 @@
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="js/main.js?v=3.2"></script>
-        <script src="js/custom.js?v=3.2"></script>
-        <!-- The javascript plugin to display page loading on top-->
-        <script src="js/plugins/pace.min.js"></script>
-        <!-- Page specific javascripts-->
-        <script type="text/javascript" src="js/plugins/chart.js"></script>
+        <script src="js/main.js?v=3.3"></script>
+        <script src="js/custom.js?v=3.3"></script>
     </body>
 </html>
