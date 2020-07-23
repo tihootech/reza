@@ -245,9 +245,10 @@ $('[data-channel]').click(function () {
 	$('#map > .pl').hide();
 });
 
-$('#start-draw-rect').click(function () {
+$('.start-draw-rect').click(function () {
 	$('#map').addClass('draw-mode');
 	$('#map').attr('data-draw-mode', 'rect');
+	$('#map').attr('data-current-channel', $(this).data('channel'))
 	$('#map > line').hide();
 });
 
@@ -290,7 +291,7 @@ $(document).on('click', '#map.draw-mode', function (e) {
 	}else {
 		if ($('#map > path#new-rect').length) {
 			updateRect(xPos, yPos);
-			$('#map > path#new-rect').addClass('rect-created').removeAttr('id');
+			$('#map > path#new-rect').addClass('rect-created-'+currentChannel).removeAttr('id');
 		}else {
 			createRect(xPos, yPos);
 		}
@@ -411,11 +412,15 @@ $(document).on('click', '.icons-toolbox > i', function () {
 	item.css('font-size', size+'px');
 	item.appendTo('.image-icons');
 	$( ".image-icons > i" ).draggable();
+	$('.icons-toolbox').hide();
+	$('.icon-ready-to-post').show();
 });
 
 $(document).on('mousedown', '.image-icons > i', function (e) {
 	if (e.which == 3) {
 		$(this).remove();
+		$('.icons-toolbox').show();
+		$('.icon-ready-to-post').hide();
 		return false;
 	}
 });
@@ -426,4 +431,32 @@ $(document).on('change', '#icons-color', function () {
 
 $(document).on('input', '#icons-size', function () {
 	$( ".image-icons > i" ).css('font-size', $(this).val() + 'px');
+});
+
+
+
+
+/*******************************/
+/* clone */
+/*******************************/
+
+$(document).on('click', '[data-clone]', function () {
+	$('.last-row-error').hide()
+	var action = $(this).data('clone');
+	if (action == 'clone') {
+		var target = $(this).data('target');
+		var container = $(target);
+		var newRow = container.find('.row:first').clone();
+		newRow.find('input').val(null);
+		container.append(newRow);
+	}else if (action == 'remove') {
+		var container = $(this).parents('.clone-box');
+		var rowsCount = container.find('.row').length;
+		if (rowsCount > 1) {
+			var currentRow = $(this).parents('.row:first');
+			currentRow.remove();
+		}else {
+			container.siblings('.last-row-error').slideDown();
+		}
+	}
 });

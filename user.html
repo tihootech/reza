@@ -9,7 +9,6 @@
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.css">
 
         <!-- styles : define vars -->
         <style>
@@ -115,64 +114,47 @@
 
         <main class="app-content">
 
-            <div class="tile m-3">
+            <div class="tile m-3 m-md-5">
 
-                <form class="row justify-content-center" action="" method="get">
-
-                    <div class="col-md-2">
-                        <label for="btn"> انتخاب دکمه </label>
-                        <select class="form-control" name="btn" required>
-                            <option value=""> -- انتخاب کنید -- </option>
-                            <option> F1 </option>
-                            <option> F2 </option>
-                            <option> F3 </option>
-                            <option> F4 </option>
-                            <option> F5 </option>
-                            <option> F6 </option>
-                            <option> F7 </option>
-                            <option> F8 </option>
-                            <option> F9 </option>
-                            <option> F10 </option>
-                            <option> F11 </option>
-                            <option> F12 </option>
+                <form class="row justify-content-center" enctype="multipart/form-data">
+                    <div class="form-group col-md-2">
+                        <label for="first-name"> نام </label>
+                        <input type="text" name="first_name" id="first-name" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="last-name"> نام خانوادگی </label>
+                        <input type="text" name="last_name" id="last-name" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="position"> سمت </label>
+                        <select name="position" id="position" class="form-control">
+                            <option value=""> -- انتخاب سمت -- </option>
+                            <option>مدیر</option>
+                            <option>کاربر</option>
+                            <option>توسعه دهنده</option>
                         </select>
                     </div>
-                    <div class="col-md-2">
-                        <label for="action"> عملکرد </label>
-                        <select class="form-control" name="action" required id="btn-action">
-                            <option value=""> -- انتخاب کنید -- </option>
-                            <option value="get"> بازکردن صفحه جدید </option>
-                            <option value="function"> Function </option>
-                        </select>
+                    <div class="form-group col-md-2">
+                        <label for="mobile"> شماره موبایل </label>
+                        <input type="text" name="mobile" id="mobile" class="form-control">
                     </div>
-                    <div class="col-md-3 hidden" id="btn-action-url">
-                        <label for="content"> URL </label>
-                        <input type="text" name="content" id="content" value="" class="form-control">
-                    </div>
-                    <div class="col-md-3 hidden" id="btn-action-functions">
-                        <label for="func"> انتخاب Function </label>
-                        <select class="form-control" name="func" required>
-                            <option value=""> -- انتخاب کنید -- </option>
-                            <option>  مورد 1 </option>
-                            <option>  مورد 2 </option>
-                            <option>  مورد 3 </option>
-                            <option>  مورد 4 </option>
-                            <option>  مورد 5 </option>
-                            <option>  مورد 6 </option>
-                            <option>  مورد 7 </option>
-                            <option>  مورد 8 </option>
-                        </select>
-                    </div>
-                    <div class="col-md-2">
-                        <label for="color"> رنگ </label>
-                        <input name="color" id="color" value="" class="form-control color-picker" autocomplete="off">
+                    <div class="form-group col-md-2">
+                        <label for="profile"> تصویر کاربر </label>
+                        <input type="file" name="profile" id="profile" class="form-control">
                     </div>
                     <hr class="w-100">
-
+                    <div class="form-group col-md-2">
+                        <label for="username"> نام کاربری </label>
+                        <input type="text" name="username" id="username" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="password"> رمزعبور </label>
+                        <input type="text" name="password" id="password" class="form-control">
+                    </div>
+                    <hr class="w-100">
                     <div class="col-lg-1 col-md-2">
                         <button type="submit" class="btn btn-primary btn-block"> تایید </button>
                     </div>
-
                 </form>
 
             </div>
@@ -183,8 +165,8 @@
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.js"></script>
         <script src="js/main.js?v=3.4"></script>
         <script src="js/custom.js?v=3.4"></script>
+
     </body>
 </html>

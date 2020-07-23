@@ -12,6 +12,10 @@ body {
 	padding: 0;
 }
 
+.btn[disabled] {
+    cursor: not-allowed !important;
+}
+
 
 .sp-choose {
 	background-color: var(--primary) !important;

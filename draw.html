@@ -23,8 +23,8 @@
         </style>
 
         <!-- Main CSS-->
-        <link rel="stylesheet" type="text/css" href="css/main.css?v=3.3" />
-        <link rel="stylesheet" type="text/css" href="css/custom.css?v=3.3" />
+        <link rel="stylesheet" type="text/css" href="css/main.css?v=3.4" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css?v=3.4" />
 
     </head>
     <body>
@@ -152,16 +152,47 @@
                             <i class="material-icons" data-content="دوربین حافظه 3">filter_3</i>
                             <i class="material-icons ml-auto" data-content="دوربین حافظه 4">filter_4</i>
 
-                            <input type="text" class="form-control color-picker mx-2" id="icons-color" name=""
-                            placeholder="انتخاب رنگ آیکون ها">
-                            <div class="mx-3">
-                                <b class="d-block"> سایز آیکون ها </b>
-                                <input class="input-range slider" type="range" id="icons-size" value="40" min="10" max="100" style="direction:rtl">
-                            </div>
-
                             <i class="material-icons mr-auto" data-content="سیستم صوتی">campaign</i>
                             <i class="material-icons" data-content="هشدار">notifications_active</i>
                         </div>
+
+                        <div class="icon-ready-to-post collapse">
+                            <div class="container-fluid">
+                                <form class="row justify-content-center mt-3">
+                                    <div class="col-md-2">
+                                        <input type="text" class="form-control" name="output" placeholder="IP">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="text" class="form-control" name="output" placeholder="نام">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="text" class="form-control color-picker" id="icons-color" name="color"
+                                        placeholder="انتخاب رنگ">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="text" class="form-control" name="output" placeholder="محتوای خروجی">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <select class="form-control" name="method[]">
+                                            <option value=""> -- انتخاب کنید -- </option>
+                                            <option> POST </option>
+                                            <option> GET </option>
+                                            <option> SERIAL </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="d-flex">
+                                            <div class="ml-2">
+                                                <b class="d-block"> سایز آیکون </b>
+                                                <input class="input-range slider" type="range" id="icons-size" value="40" min="10" max="100" style="direction:rtl">
+                                            </div>
+                                            <button type="button" class="btn btn-primary btn-sm" name="button"> <i class="material-icons">check</i> </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="col-lg-2 ip-container scroll-design">
                         <div class="hidden my-2 text-center" id="channels">
@@ -202,7 +233,8 @@
                                 <input class="input-range slider" type="range" id="rect-opacity" value="80" min="0" max="100" style="direction:rtl">
                             </div>
                             <div class="w-50 d-inline-block">
-                                <button type="button" class="btn btn-block btn-primary btn-sm" id="start-draw-rect"> شروع رسم </button>
+                                <button type="button" class="btn btn-primary btn-sm start-draw-rect" data-channel="A"> کانال A </button>
+                                <button type="button" class="btn btn-primary btn-sm start-draw-rect" data-channel="B"> کانال B </button>
                             </div>
                             <div class="w-25 d-inline-block">
                                 <button type="button" class="btn btn-block btn-primary btn-sm" onclick="location.reload()"> تایید </button>
@@ -222,6 +254,9 @@
                                         <a href="javascript:void" class="draw-rect" data-ip="192.100.20.1" data-content="رسم ناحیه مستطیل شکل">
                                             <i class="material-icons">settings_overscan</i>
                                         </a>
+                                        <a href="#alarms-modal" data-toggle="modal" class="alarms-modal-trigger mr-1" data-ip="192.100.20.1">
+                                            <i class="material-icons">notification_important</i>
+                                        </a>
                                     </td>
                                     <td>
                                         <span class="numeric ip-span" data-lines="1"> 192.168.1.1 </span>
@@ -233,6 +268,9 @@
                                     <td>
                                         <a href="javascript:void" class="show-draw-box" data-ip="192.100.20.1" data-content="ویرایش کانال ها">
                                             <i class="material-icons">edit</i>
+                                        </a>
+                                        <a href="#alarms-modal" data-toggle="modal" class="alarms-modal-trigger mr-1" data-ip="192.100.20.1">
+                                            <i class="material-icons">notification_important</i>
                                         </a>
                                     </td>
                                     <td>
@@ -246,6 +284,9 @@
                                         <a href="javascript:void" class="show-draw-box" data-ip="192.55.1.1" data-content="ویرایش کانال ها">
                                             <i class="material-icons">edit</i>
                                         </a>
+                                        <a href="#alarms-modal" data-toggle="modal" class="alarms-modal-trigger mr-1" data-ip="192.55.1.1">
+                                            <i class="material-icons">notification_important</i>
+                                        </a>
                                     </td>
                                     <td>
                                         <span class="numeric ip-span"> 192.55.1.1 </span>
@@ -257,6 +298,9 @@
                                     <td>
                                         <a href="javascript:void" class="draw-rect" data-ip="192.178.30.20" data-content="رسم ناحیه مستطیل شکل">
                                             <i class="material-icons">settings_overscan</i>
+                                        </a>
+                                        <a href="#alarms-modal" data-toggle="modal" class="alarms-modal-trigger mr-1" data-ip="192.178.30.20">
+                                            <i class="material-icons">notification_important</i>
                                         </a>
                                     </td>
                                     <td>
@@ -270,6 +314,9 @@
                                         <a href="javascript:void" class="draw-rect" data-ip="192.168.9.9" data-content="رسم ناحیه مستطیل شکل">
                                             <i class="material-icons">settings_overscan</i>
                                         </a>
+                                        <a href="#alarms-modal" data-toggle="modal" class="alarms-modal-trigger mr-1" data-ip="192.168.9.9">
+                                            <i class="material-icons">notification_important</i>
+                                        </a>
                                     </td>
                                     <td>
                                         <span class="numeric ip-span" data-lines="2"> 192.168.9.9 </span>
@@ -281,6 +328,9 @@
                                     <td>
                                         <a href="javascript:void" class="show-draw-box" data-ip="192.168.65.36" data-content="ویرایش کانال ها">
                                             <i class="material-icons">edit</i>
+                                        </a>
+                                        <a href="#alarms-modal" data-toggle="modal" class="alarms-modal-trigger mr-1" data-ip="192.168.65.36">
+                                            <i class="material-icons">notification_important</i>
                                         </a>
                                     </td>
                                     <td>
@@ -297,14 +347,101 @@
 
         </main>
 
+        <div class="modal fade" id="alarms-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">آلارم های اولیه و ثانویه</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row justify-content-around">
+                                <div class="col-md-5">
+                                    <div class="d-flex justify-content-between">
+                                        <h4> آلارم های اولیه </h4>
+                                        <a class="btn btn-primary btn-sm text-light" data-clone="clone" data-target="#clone-box-1">
+                                            <i class="material-icons">add</i>
+                                        </a>
+                                    </div>
+                                    <hr>
+                                    <div class="clone-box" id="clone-box-1">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <select class="form-control" name="method[]">
+                                                    <option value=""> -- انتخاب کنید -- </option>
+                                                    <option> POST </option>
+                                                    <option> GET </option>
+                                                    <option> SERIAL </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <input type="text" name="output[]" class="form-control" value="">
+                                            </div>
+                                            <div class="col-md-2 text-center">
+                                                <a class="btn btn-danger btn-sm" href="#" data-clone="remove">
+                                                    <i class="material-icons">delete</i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-danger last-row-error mt-2 collapse">
+                                        همه ردیف ها را نمیتوان حذف کرد
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex justify-content-between">
+                                        <h4> آلارم های ثانویه </h4>
+                                        <a class="btn btn-primary btn-sm text-light" data-clone="clone" data-target="#clone-box-2">
+                                            <i class="material-icons">add</i>
+                                        </a>
+                                    </div>
+                                    <hr>
+                                    <div class="clone-box" id="clone-box-2">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <select class="form-control" name="method[]">
+                                                    <option value=""> -- انتخاب کنید -- </option>
+                                                    <option> POST </option>
+                                                    <option> GET </option>
+                                                    <option> SERIAL </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <input type="text" name="output[]" class="form-control" value="">
+                                            </div>
+                                            <div class="col-md-2 text-center">
+                                                <a class="btn btn-danger btn-sm" href="#" data-clone="remove">
+                                                    <i class="material-icons">delete</i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-danger last-row-error mt-2 collapse">
+                                        همه ردیف ها را نمیتوان حذف کرد
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                        <button type="button" class="btn btn-primary">ذخیره تغییرات</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Essential javascripts for application to work-->
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.js"></script>
-        <script src="js/main.js?v=3.3"></script>
-        <script src="js/custom.js?v=3.3"></script>
+        <script src="js/main.js?v=3.4"></script>
+        <script src="js/custom.js?v=3.4"></script>
 
     </body>
 </html>
